@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title CodePen - Login Form
+    link(rel='stylesheet', href='/css/login.css')
+  body
+    //span#toggle-login.button(href='#') Log in
+    #login
+      #triangle
+      h1 Log in
+      form(id="login", method="POST", action="/login")
+        input(type='text', placeholder='user', name='username')
+        input#password(type='password', placeholder='Password', name='password')
+        input(type='submit', value='Log In')
+        
+    script(src='http://codepen.io/assets/libs/fullpage/jquery.js')
+    script(src='js/index.js')
