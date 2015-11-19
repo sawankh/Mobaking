@@ -12,16 +12,9 @@ body {
 
 /* CSS used here will be applied after bootstrap.css */
 
-.col-sm-5cols{
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-@media (min-width: 768px) {
-.col-sm-5cols {
-        width: 20%;
-        float: left;
-    }
+#logo {
+	width: 40%;
+	height: 40%;
+	display: block;
+    margin: 0 auto;
 }
