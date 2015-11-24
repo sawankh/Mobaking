@@ -13,11 +13,11 @@ var app = express();
 Database and Models
 */
 mongoose.connect("mongodb://localhost/myapp");
-var UserSchema = new mongoose.Schema({
+var gameSchema = new mongoose.Schema({
     
 });
 
-var User = mongoose.model('users', UserSchema);
+var game = mongoose.model('games', gameSchema);
 /*
 Middlewares and configurations 
 */
