@@ -1,0 +1,94 @@
+.recentcomments a {
+	display:inline !important;
+	padding:0 !important;
+	margin:0 !important;
+}
+body {
+	background-color:  #545454;
+}
+ul.arrowlist li:before, .dropcap2, .dropcap3, .widget .tagcloud a, .tags a, .search-box .search-field, #sidebar select {
+	background-color: #000000;
+}
+.special-heading {
+	border-left-color: #000000;
+}
+#main, #controls-wrap {
+	border-top-color: #000000;
+}
+#menu-wrap, #sidebar, #slidecaption, .social-bookmarks ul li, #controls-wrap, #thumb-tray, #nav ul ul, #nav-horizontal ul li ul {
+	background-color:rgba( 0, 0, 0, 0.7);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#70000000,endColorstr=#70000000)";
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#70000000, endColorstr=#70000000);
+	zoom: 1;
+}
+#menu-wrap, #sidebar, #slidecaption, .social-bookmarks ul li, #controls-wrap, #thumb-tray, #nav ul ul, #nav-horizontal ul li ul {
+	background-color:rgb( 0,0,0)\9;
+}
+#main {
+	background: rgba( 255, 255, 255, 1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFffffff,endColorstr=#FFffffff)";
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFffffff, endColorstr=#FFffffff);
+	zoom: 1;
+}
+body, #wrap-wide {
+	background-image: url(images/bg/13.png);
+}
+body {
+	font-size:12px;
+	font-family:  Droid Sans, sans-serif;
+	color:#444444;
+}
+a:link, a:visited {
+	color: #6399b0;
+}
+a:hover, a:active {
+	color: #6fc3c4;
+}
+#entries .post-meta a:hover, #nav a:hover, #sidebar ul li a:hover, #entries .read-more:hover, #nav-horizontal ul li a:hover, #portfolio .folio-cats a:hover, .single-portfolio .meta a:hover, a.icon-link:hover, .comment-author-info a:hover, .entry ul li a:hover, .widget .tagcloud a:hover, .tags a:hover, .jqueryslidemenu ul li a:hover, #nav-toggle-content ul li a:hover {
+	color: #6fc3c4 !important;
+}
+#sidebar .widget h3.widget-title {
+	font: normal 14px "Oswald", Arial, sans-serif;
+}
+#sidebar .widget h3.widget-title {
+	color: #ffffff;
+}
+#controls-wrap, #main {
+	border-top: 4px solid #bd0202;
+}
+h1, h2, h3, h4, h5, h6, #entries h3.post-title, #entries h3.post-title a, #entries h3.post-title a:active, .special-heading, #entries h2.page-title, #portfolio .folio-box h3.folio-title, #portfolio .folio-box h3.folio-title a, #portfolio .folio-box h3.folio-title:active {
+	font-family: "Oswald", Arial, sans-serif;
+	color: #444444;
+}
+#filters li a, #content a.button, #slidecaption h2, #related-folio .folio-box h3.folio-title, #related-folio .folio-box h3.folio-title a, #related-folio .folio-box h3.folio-title:active {
+	font-family: "Oswald", Arial, sans-serif;
+}
+#nav a, #nav-horizontal ul li a {
+	font-family: "Oswald", Arial, sans-serif;
+	font-weight: 300;
+	font-size:17px;
+}
+#nav-toggle-content ul li a {
+	font-family: "Oswald", Arial, sans-serif;
+	font-weight: 300;
+}
+#nav a {
+	color:#ffffff;
+}
+.jqueryslidemenu ul li, #nav-toggle-content ul li {
+	color:#777777;
+}
+.jqueryslidemenu span {
+	color:#adadad;
+}
+#entries h2.page-title {
+	color: #0e578c;
+}
+.thumbnail-container, .woo-item-details {
+	text-align:center;
+}
+.star-rating {
+	margin:0 auto 10px;
+	float: none;
+	display: block;
+}
