@@ -4,20 +4,20 @@ html(lang='en')
     meta(charset='UTF-8')
     title Mobaking
     link(rel='stylesheet', href='css/flexslider.css', type='text/css', media='screen')
-    link(rel='stylesheet', type='text/css', href='css/style.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='/css/style.css', media='screen')
     link(rel='stylesheet', href='css/prettyPhoto.css', type='text/css', media='screen')
     link(rel='stylesheet', href='css/supersized.css', type='text/css', media='screen')
-    //if lt IE 9
-      link(rel='stylesheet', href='css/ie.css', type='text/css', media='screen')
+    //
+      if lt IE 9link(rel='stylesheet', href='css/ie.css', type='text/css', media='screen')
     // MOBILE SETTINGS
     link(rel='stylesheet', href='css/responsive.css', type='text/css', media='screen')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    //if lt IE 9
-      script(src='js/css3-mediaqueries.js')
-    //if lte IE 9
-      link(rel='stylesheet', href='css/ie8.css', type='text/css', media='screen')
-    //if IE 7
-      link(rel='stylesheet', href='css/ie7.css', type='text/css', media='screen')
+    //
+      if lt IE 9script(src='js/css3-mediaqueries.js')
+    //
+      if lte IE 9link(rel='stylesheet', href='css/ie8.css', type='text/css', media='screen')
+    //
+      if IE 7link(rel='stylesheet', href='css/ie7.css', type='text/css', media='screen')
     link#mediaelementjs-styles-css(rel='stylesheet', href='css/mediaelementplayer.min.css', type='text/css', media='all')
     script(type='text/javascript', src='js/comment-reply.min.html')
     script(type='text/javascript', src='js/jquery.js')
@@ -36,7 +36,7 @@ html(lang='en')
     link(href='http://fonts.googleapis.com/css?family=Droid+Sans', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Oswald:700,400,300', rel='stylesheet', type='text/css')
     // custom styles
-    link(rel='stylesheet', type='text/css', href='custom.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='/css/custom.css', media='screen')
   body.home
     .social-in-homepage.social-bookmarks
       ul
@@ -93,7 +93,7 @@ html(lang='en')
     #menu-wrap
       #menu
         a#logo(title='Flexible responsive wordpress theme', href='index-2.html')
-          img(src='images/mobaking_logo.png', height='215', width='122', alt='Logo')
+          img(src='images/mobaking_logo.png', height='122', width='215', alt='Logo')
         // [/logo]
         #nav.jqueryslidemenu
           ul#menu-main.menu
@@ -291,14 +291,14 @@ html(lang='en')
       jQuery(document).ready(function () {
       jQuery.supersized({
       // Functionality
-      slide_interval          :   10000,		// Length between transitions
-      transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-      transition_speed		:	1000,
+      slide_interval          :   10000,    // Length between transitions
+      transition              :   1,      // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+      transition_speed    : 1000,
       keyboard_nav            :   1,
       // Speed of transition
       // Components
-      slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-      slides 					:  	[			// Slideshow Images
+      slide_links       : 'blank',  // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+      slides          :   [     // Slideshow Images
       {image : 'images/photodune-631207-hispanic-man-running-and-jumping-from-a-wall-m.jpg', title : '<div class="slider-caption"><h2>Integer malesuada commodo nulla</h2><p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis....</p></div>',  thumb : 'images/photodune-631207-hispanic-man-running-and-jumping-from-a-wall-m.jpg', url : ''} ,
       {image : 'images/6.jpg',  thumb : 'images/6.jpg', url : ''} ,
       {image : 'images/1_.jpg',  thumb : 'images/1_.jpg', url : ''} ,
@@ -326,11 +326,3 @@ html(lang='en')
       a#tray-button
         img#tray-arrow(data-retina='true', src='images/slider/button-tray-up.png')
       a#shutdown(href='#') ShutDown
-    // [/Control Bar]
-    #audio-wrap
-      audio(preload='auto', src='files/February-shadow.mp3')
-    script(type='text/javascript', src='../../../apis.google.com/js/plusone.js')
-    script(type='text/javascript').
-      function plusone_vote( obj ) {
-      _gaq.push(['_trackEvent','plusone',obj.state]);
-      }

@@ -7,7 +7,7 @@
 	Version: 2.2
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Tags: translation-ready, theme-options, post-formats, featured-images,  custom-menu
+	Tags: translation-ready, theme-options, post-formats, featured-/images,  custom-menu
 	Text Domain: smartscreen
 
 
@@ -292,7 +292,7 @@ margin-bottom: 15px !important;
     background:#fff;
 }
 #entries .frame .zoom, #entries .frame .video {
-    background: url("images/overlay_zoom.png") center center no-repeat;
+    background: url("/images/overlay_zoom.png") center center no-repeat;
     height: 50px;
     width: 100%;
     display: block;
@@ -301,7 +301,7 @@ margin-bottom: 15px !important;
     cursor: pointer;
 }
 #entries .frame .video {
-    background: url("images/overlay_video.png") center center no-repeat;
+    background: url("/images/overlay_video.png") center center no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -311,7 +311,7 @@ only screen and (min-resolution: 144dpi) {
 
     #entries .frame .video  {
         background-size: 29px 28px;
-        background-image: url('images/overlay_video%402x.png');
+        background-image: url('/images/overlay_video%402x.png');
     }
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
@@ -322,7 +322,7 @@ only screen and (min-resolution: 144dpi) {
 
     #entries .frame .zoom  {
         background-size: 29px 28px;
-        background-image: url('images/overlay_zoom%402x.png');
+        background-image: url('/images/overlay_zoom%402x.png');
     }
 }
 /* author bio */
@@ -791,7 +791,7 @@ textarea {
     letter-spacing: 1px;
 }
 #sidebar ul li {
-    background: url(images/arrow_bullet.png) no-repeat;
+    background: url(/images/arrow_bullet.png) no-repeat;
     padding: 0 0 10px 20px;
     color: #444;
 }
@@ -806,7 +806,7 @@ only screen and (min-resolution: 144dpi) {
 
     #sidebar ul li {
         background-size: 16px 16px;
-        background-image: url('images/arrow_bullet%402x.png');
+        background-image: url('/images/arrow_bullet%402x.png');
     }
 }
 #sidebar ul li, #sidebar ul li a, #sidebar ul li a:active {
@@ -858,7 +858,7 @@ only screen and (min-resolution: 144dpi) {
 }
 /* recent tweets */
 #sidebar .recent-tweets li {
-    background: url("images/twitter.png") no-repeat left 6px;
+    background: url("/images/twitter.png") no-repeat left 6px;
     display: block;
     color: #d2d2d2;
     padding: 0 0 20px 37px;
@@ -872,7 +872,7 @@ only screen and (min-resolution: 144dpi) {
 
     #sidebar .recent-tweets li {
         background-size: 24px 24px;
-        background-image: url('images/twitter%402x.png');
+        background-image: url('/images/twitter%402x.png');
     }
 }
 #sidebar .recent-tweets ul li a, #sidebar .recent-tweets ul li a:visited {
@@ -1002,7 +1002,7 @@ only screen and (min-resolution: 144dpi) {
 }
 .search-box .search-go {
     border: none;
-    background: url(images/search.png) no-repeat right center;
+    background: url(/images/search.png) no-repeat right center;
     width: 35px;
     height: 35px;
     display: block;
@@ -1023,7 +1023,7 @@ only screen and (min-resolution: 144dpi) {
 
     .search-box .search-go {
         background-size: 32px 32px;
-        background-image: url('images/search%402x.png');
+        background-image: url('/images/search%402x.png');
     }
 }
 #footer .search-box .search-field {
@@ -1037,7 +1037,7 @@ only screen and (min-resolution: 144dpi) {
     top: 0;
     left: 80px;
     padding: 50px 0;
-    background: rgba(0, 0, 0, .7) url("images/sec_highlight.png") no-repeat;
+    background: rgba(0, 0, 0, .7) url("/images/sec_highlight.png") no-repeat;
     -webkit-border-bottom-right-radius: 25px;
     -webkit-border-bottom-left-radius: 25px;
     -moz-border-radius-bottomright: 25px;
@@ -1076,11 +1076,11 @@ select.selectnav {
     -webkit-appearance: none;
     appearance: none;
     background: #1F1B18;
-    background: url(images/menu_dd.png) no-repeat right center, -moz-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
-    background: url(images/menu_dd.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0.9)));
-    background: url(images/menu_dd.png) no-repeat right center, -webkit-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
-    background: url(images/menu_dd.png) no-repeat right center, -o-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
-    background: url(images/menu_dd.png) no-repeat right center, -ms-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    background: url(/images/menu_dd.png) no-repeat right center, -moz-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+    background: url(/images/menu_dd.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0.9)));
+    background: url(/images/menu_dd.png) no-repeat right center, -webkit-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    background: url(/images/menu_dd.png) no-repeat right center, -o-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
+    background: url(/images/menu_dd.png) no-repeat right center, -ms-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%);
     -webkit-border-radius: 0;
     border: 1px solid #000;
     color: #8e857c;
@@ -1154,7 +1154,7 @@ select.selectnav option {
     position: fixed;
     bottom: 50px;
     right: 80px;
-    background: rgba(0, 0, 0, .7) url("images/sec_highlight.png") no-repeat;
+    background: rgba(0, 0, 0, .7) url("/images/sec_highlight.png") no-repeat;
     -webkit-border-top-left-radius: 25px;
     -webkit-border-top-right-radius: 25px;
     -moz-border-radius-topleft: 25px;
@@ -1171,7 +1171,7 @@ only screen and (min-resolution: 144dpi) {
 
     #menu-wrap, #slidecaption {
         background-size: 261px 261px;
-        background-image: url('images/sec_highlight%402x.png');
+        background-image: url('/images/sec_highlight%402x.png');
     }
 }
 #slidecaption h2 {
@@ -1242,7 +1242,7 @@ ul#thumb-list li img {
 }
 #thumb-back {
     left: 0;
-    background: url('images/slider/thumb-back.png') no-repeat center center;
+    background: url('/images/slider/thumb-back.png') no-repeat center center;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -1252,12 +1252,12 @@ only screen and (min-resolution: 144dpi) {
 
     #thumb-back {
         background-size: 28px 28px;
-        background-image: url('images/slider/thumb-back%402x.png');
+        background-image: url('/images/slider/thumb-back%402x.png');
     }
 }
 #thumb-forward {
     right: 0;
-    background: url('images/slider/thumb-forward.png') no-repeat center center;
+    background: url('/images/slider/thumb-forward.png') no-repeat center center;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -1267,7 +1267,7 @@ only screen and (min-resolution: 144dpi) {
 
     #thumb-forward {
         background-size: 28px 28px;
-        background-image: url('images/slider/thumb-forward%402x.png');
+        background-image: url('/images/slider/thumb-forward%402x.png');
     }
 }
 #thumb-back:hover, #thumb-forward:hover {
@@ -1327,7 +1327,7 @@ ul#thumb-list li:hover {
 }
 #prevslide {
     margin-right: 5px;
-    background: url('images/slider/back.png') no-repeat;
+    background: url('/images/slider/back.png') no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -1337,12 +1337,12 @@ only screen and (min-resolution: 144dpi) {
 
     #prevslide {
         background-size: 19px 18px;
-        background-image: url('images/slider/back%402x.png');
+        background-image: url('/images/slider/back%402x.png');
     }
 }
 #nextslide {
     margin-right: 80px;
-    background: url('images/slider/forward.png') no-repeat;
+    background: url('/images/slider/forward.png') no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -1352,7 +1352,7 @@ only screen and (min-resolution: 144dpi) {
 
     #nextslide {
         background-size: 19px 18px;
-        background-image: url('images/slider/forward%402x.png');
+        background-image: url('/images/slider/forward%402x.png');
     }
 }
 #play-button {
@@ -1369,13 +1369,13 @@ only screen and (min-resolution: 144dpi) {
     left: 0;
     height: 4px;
     width: 100%;
-    background: url('images/slider/progress-back.png') repeat-x;
+    background: url('/images/slider/progress-back.png') repeat-x;
 }
 #progress-bar {
     position: relative;
     height: 4px;
     width: 100%;
-    background: url('images/slider/progress-bar.png') repeat-x;
+    background: url('/images/slider/progress-bar.png') repeat-x;
 }
 /* footer copyright */
 .copyright {
@@ -1394,17 +1394,17 @@ only screen and (min-resolution: 144dpi) {
     cursor: pointer;
 }
 #entries-toggle {
-    background: url("images/toggle_icons.png") 0 -128px no-repeat;
+    background: url("/images/toggle_icons.png") 0 -128px no-repeat;
     top: 0;
     right: 0;
 }
 #shutdown {
-    background: url("images/toggle_icons.png") 0 -64px no-repeat;
+    background: url("/images/toggle_icons.png") 0 -64px no-repeat;
     top: 7px;
     left: 45px;
 }
 #menu-toggle {
-    background: url("images/toggle_icons.png") 0 -32px no-repeat;
+    background: url("/images/toggle_icons.png") 0 -32px no-repeat;
     bottom: -5px;
     left: 117px;
 }
@@ -1413,16 +1413,16 @@ only screen and (min-resolution: 144dpi) {
     left: 10px !important;
 }
 #menu-toggle.active {
-    background: url("images/toggle_icons.png") 0 0 no-repeat;
+    background: url("/images/toggle_icons.png") 0 0 no-repeat;
 }
 #shutdown.active {
-    background: url("images/toggle_icons.png") 0 -97px no-repeat;
+    background: url("/images/toggle_icons.png") 0 -97px no-repeat;
 }
 #entries-toggle.active {
-    background: url("images/toggle_icons.png") 0 -160px no-repeat;
+    background: url("/images/toggle_icons.png") 0 -160px no-repeat;
 }
 #scrollup {
-    background: url("images/toggle_icons.png") 0 -192px no-repeat;
+    background: url("/images/toggle_icons.png") 0 -192px no-repeat;
     position: fixed;
     bottom: -7px;
     left: 50%;
@@ -1443,7 +1443,7 @@ only screen and (min-resolution: 144dpi) {
     #entries-toggle.active,
     #scrollup {
         background-size: 32px 224px;
-        background-image: url('images/toggle_icons%402x.png');
+        background-image: url('/images/toggle_icons%402x.png');
     }
 }
 /*	8.	Contact
@@ -1642,172 +1642,172 @@ table.tbl-style tr:hover td {
     transition: all 0.3s ease 0s;
 }
 .social-bookmarks .facebook a {
-    background: url("images/social_icons.png") 0 0 no-repeat;
+    background: url("/images/social_icons.png") 0 0 no-repeat;
 }
 .social-bookmarks .facebook a:hover {
-    background: #3b5998 url("images/social_icons.png") 0 -40px no-repeat;
+    background: #3b5998 url("/images/social_icons.png") 0 -40px no-repeat;
 }
 .social-bookmarks .gplus a {
-    background: url("images/social_icons.png") -40px 0 no-repeat;
+    background: url("/images/social_icons.png") -40px 0 no-repeat;
 }
 .social-bookmarks .gplus a:hover {
-    background: #d94a39 url("images/social_icons.png") -40px -40px no-repeat;
+    background: #d94a39 url("/images/social_icons.png") -40px -40px no-repeat;
 }
 .social-bookmarks .twitter a {
-    background: url("images/social_icons.png") -80px 0 no-repeat;
+    background: url("/images/social_icons.png") -80px 0 no-repeat;
 }
 .social-bookmarks .twitter a:hover {
-    background: #48c4d2 url("images/social_icons.png") -80px -40px no-repeat;
+    background: #48c4d2 url("/images/social_icons.png") -80px -40px no-repeat;
 }
 .social-bookmarks .youtube a {
-    background: url("images/social_icons.png") -120px 0 no-repeat;
+    background: url("/images/social_icons.png") -120px 0 no-repeat;
 }
 .social-bookmarks .youtube a:hover {
-    background: #f45750 url("images/social_icons.png") -120px -40px no-repeat;
+    background: #f45750 url("/images/social_icons.png") -120px -40px no-repeat;
 }
 .social-bookmarks .vimeo a {
-    background: url("images/social_icons.png") -160px 0 no-repeat;
+    background: url("/images/social_icons.png") -160px 0 no-repeat;
 }
 .social-bookmarks .vimeo a:hover {
-    background: #62a0ad url("images/social_icons.png") -160px -40px no-repeat;
+    background: #62a0ad url("/images/social_icons.png") -160px -40px no-repeat;
 }
 .social-bookmarks .flickr a {
-    background: url("images/social_icons.png") -200px 0 no-repeat;
+    background: url("/images/social_icons.png") -200px 0 no-repeat;
 }
 .social-bookmarks .flickr a:hover {
-    background: #f1628b url("images/social_icons.png") -200px -40px no-repeat;
+    background: #f1628b url("/images/social_icons.png") -200px -40px no-repeat;
 }
 .social-bookmarks .skype a {
-    background: url("images/social_icons.png") -240px 0 no-repeat;
+    background: url("/images/social_icons.png") -240px 0 no-repeat;
 }
 .social-bookmarks .skype a:hover {
-    background: #18b7f1 url("images/social_icons.png") -240px -40px no-repeat;
+    background: #18b7f1 url("/images/social_icons.png") -240px -40px no-repeat;
 }
 .social-bookmarks .linkedin a {
-    background: url("images/social_icons.png") -280px 0 no-repeat;
+    background: url("/images/social_icons.png") -280px 0 no-repeat;
 }
 .social-bookmarks .linkedin a:hover {
-    background: #71b2d0 url("images/social_icons.png") -280px -40px no-repeat;
+    background: #71b2d0 url("/images/social_icons.png") -280px -40px no-repeat;
 }
 .social-bookmarks .behance a {
-    background: url("images/social_icons.png") -320px 0 no-repeat;
+    background: url("/images/social_icons.png") -320px 0 no-repeat;
 }
 .social-bookmarks .behance a:hover {
-    background: #18a3fe url("images/social_icons.png") -320px -40px no-repeat;
+    background: #18a3fe url("/images/social_icons.png") -320px -40px no-repeat;
 }
 .social-bookmarks .picasa a {
-    background: url("images/social_icons.png") -360px 0 no-repeat;
+    background: url("/images/social_icons.png") -360px 0 no-repeat;
 }
 .social-bookmarks .picasa a:hover {
-    background: #444 url("images/social_icons.png") -360px -40px no-repeat;
+    background: #444 url("/images/social_icons.png") -360px -40px no-repeat;
 }
 .social-bookmarks .dribble a {
-    background: url("images/social_icons.png") -400px 0 no-repeat;
+    background: url("/images/social_icons.png") -400px 0 no-repeat;
 }
 .social-bookmarks .dribble a:hover {
-    background: #ef5b92 url("images/social_icons.png") -400px -40px no-repeat;
+    background: #ef5b92 url("/images/social_icons.png") -400px -40px no-repeat;
 }
 .social-bookmarks .digg a {
-    background: url("images/social_icons.png") -440px 0 no-repeat;
+    background: url("/images/social_icons.png") -440px 0 no-repeat;
 }
 .social-bookmarks .digg a:hover {
-    background: #2882c6 url("images/social_icons.png") -440px -40px no-repeat;
+    background: #2882c6 url("/images/social_icons.png") -440px -40px no-repeat;
 }
 .social-bookmarks .blogger a {
-    background: url("images/social_icons.png") -480px 0 no-repeat;
+    background: url("/images/social_icons.png") -480px 0 no-repeat;
 }
 .social-bookmarks .blogger a:hover {
-    background: #fb913f url("images/social_icons.png") -480px -40px no-repeat;
+    background: #fb913f url("/images/social_icons.png") -480px -40px no-repeat;
 }
 .social-bookmarks .supon a {
-    background: url("images/social_icons.png") -520px 0 no-repeat;
+    background: url("/images/social_icons.png") -520px 0 no-repeat;
 }
 .social-bookmarks .supon a:hover {
-    background: #eb4924 url("images/social_icons.png") -520px -40px no-repeat;
+    background: #eb4924 url("/images/social_icons.png") -520px -40px no-repeat;
 }
 .social-bookmarks .delicious a {
-    background: url("images/social_icons.png") -560px 0 no-repeat;
+    background: url("/images/social_icons.png") -560px 0 no-repeat;
 }
 .social-bookmarks .delicious a:hover {
-    background: #3274d1 url("images/social_icons.png") -560px -40px no-repeat;
+    background: #3274d1 url("/images/social_icons.png") -560px -40px no-repeat;
 }
 .social-bookmarks .tumblr a {
-    background: url("images/social_icons.png") -600px 0 no-repeat;
+    background: url("/images/social_icons.png") -600px 0 no-repeat;
 }
 .social-bookmarks .tumblr a:hover {
-    background: #3a5976 url("images/social_icons.png") -600px -40px no-repeat;
+    background: #3a5976 url("/images/social_icons.png") -600px -40px no-repeat;
 }
 .social-bookmarks .dropbox a {
-    background: url("images/social_icons.png") -640px 0 no-repeat;
+    background: url("/images/social_icons.png") -640px 0 no-repeat;
 }
 .social-bookmarks .dropbox a:hover {
-    background: #18b7f1 url("images/social_icons.png") -640px -40px no-repeat;
+    background: #18b7f1 url("/images/social_icons.png") -640px -40px no-repeat;
 }
 .social-bookmarks .google a {
-    background: url("images/social_icons.png") -680px 0 no-repeat;
+    background: url("/images/social_icons.png") -680px 0 no-repeat;
 }
 .social-bookmarks .google a:hover {
-    background: #dd4b39 url("images/social_icons.png") -680px -40px no-repeat;
+    background: #dd4b39 url("/images/social_icons.png") -680px -40px no-repeat;
 }
 .social-bookmarks .rss a {
-    background: url("images/social_icons.png") -720px 0 no-repeat;
+    background: url("/images/social_icons.png") -720px 0 no-repeat;
 }
 .social-bookmarks .rss a:hover {
-    background: #fe9900 url("images/social_icons.png") -720px -40px no-repeat;
+    background: #fe9900 url("/images/social_icons.png") -720px -40px no-repeat;
 }
 .social-bookmarks .wordpress a {
-    background: url("images/social_icons.png") -760px 0 no-repeat;
+    background: url("/images/social_icons.png") -760px 0 no-repeat;
 }
 .social-bookmarks .wordpress a:hover {
-    background: #464646 url("images/social_icons.png") -760px -40px no-repeat;
+    background: #464646 url("/images/social_icons.png") -760px -40px no-repeat;
 }
 .social-bookmarks .apple a {
-    background: url("images/social_icons.png") -800px 0 no-repeat;
+    background: url("/images/social_icons.png") -800px 0 no-repeat;
 }
 .social-bookmarks .apple a:hover {
-    background: #444 url("images/social_icons.png") -800px -40px no-repeat;
+    background: #444 url("/images/social_icons.png") -800px -40px no-repeat;
 }
 .social-bookmarks .yahoo a {
-    background: url("images/social_icons.png") -840px 0 no-repeat;
+    background: url("/images/social_icons.png") -840px 0 no-repeat;
 }
 .social-bookmarks .yahoo a:hover {
-    background: #ab64bc url("images/social_icons.png") -840px -40px no-repeat;
+    background: #ab64bc url("/images/social_icons.png") -840px -40px no-repeat;
 }
 .social-bookmarks .android a {
-    background: url("images/social_icons.png") -880px 0 no-repeat;
+    background: url("/images/social_icons.png") -880px 0 no-repeat;
 }
 .social-bookmarks .android a:hover {
-    background: #a5c43b url("images/social_icons.png") -880px -40px no-repeat;
+    background: #a5c43b url("/images/social_icons.png") -880px -40px no-repeat;
 }
 .social-bookmarks .html5 a {
-    background: url("images/social_icons.png") -920px 0 no-repeat;
+    background: url("/images/social_icons.png") -920px 0 no-repeat;
 }
 .social-bookmarks .html5 a:hover {
-    background: #f3642c url("images/social_icons.png") -920px -40px no-repeat;
+    background: #f3642c url("/images/social_icons.png") -920px -40px no-repeat;
 }
 .social-bookmarks .photo-500 a {
-    background: url("images/social_icons.png") -960px 0 no-repeat;
+    background: url("/images/social_icons.png") -960px 0 no-repeat;
 }
 .social-bookmarks .photo-500 a:hover {
-    background: #00adef url("images/social_icons.png") -960px -40px no-repeat;
+    background: #00adef url("/images/social_icons.png") -960px -40px no-repeat;
 }
 .social-bookmarks .instagram a {
-    background: url("images/social_icons.png") -1000px 0 no-repeat;
+    background: url("/images/social_icons.png") -1000px 0 no-repeat;
 }
 .social-bookmarks .instagram a:hover {
-    background: #5d3d35 url("images/social_icons.png") -1000px -40px no-repeat;
+    background: #5d3d35 url("/images/social_icons.png") -1000px -40px no-repeat;
 }
 .social-bookmarks .pinterest a {
-    background: url("images/social_icons.png") -1040px 0 no-repeat;
+    background: url("/images/social_icons.png") -1040px 0 no-repeat;
 }
 .social-bookmarks .pinterest a:hover {
-    background: #c9232f url("images/social_icons.png") -1040px -40px no-repeat;
+    background: #c9232f url("/images/social_icons.png") -1040px -40px no-repeat;
 }
 .social-bookmarks .email-social a {
-    background: url("images/social_icons.png") -1080px 0 no-repeat;
+    background: url("/images/social_icons.png") -1080px 0 no-repeat;
 }
 .social-bookmarks .email-social a:hover {
-    background: #1f6f8a url("images/social_icons.png") -1080px -40px no-repeat;
+    background: #1f6f8a url("/images/social_icons.png") -1080px -40px no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -1872,7 +1872,7 @@ only screen and (min-resolution: 144dpi) {
     .social-bookmarks .pinterest a:hover,
     .social-bookmarks .email-social a:hover {
         background-size: 1120px 80px;
-        background-image: url('images/social_icons%402x.png');
+        background-image: url('/images/social_icons%402x.png');
     }
 }
 /* Bottons */
@@ -1912,7 +1912,7 @@ only screen and (min-resolution: 144dpi) {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("images/btn_glow.png") center top repeat-x;
+    background: url("/images/btn_glow.png") center top repeat-x;
     border-top: 1px solid rgba(255, 255, 255, .5);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -2073,7 +2073,7 @@ a.icon-link {
     display: block;
 }
 .icon-link .arrow-icon {
-    background: url(images/small_icons/moreinfo.png) no-repeat 0 3px;
+    background: url(/images/small_icons/moreinfo.png) no-repeat 0 3px;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2083,11 +2083,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .arrow-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/moreinfo%402x.png');
+        background-image: url('/images/small_icons/moreinfo%402x.png');
     }
 }
 .icon-link .email-icon {
-    background: url(images/small_icons/email.png) no-repeat 0 3px;
+    background: url(/images/small_icons/email.png) no-repeat 0 3px;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2097,11 +2097,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .email-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/email%402x.png');
+        background-image: url('/images/small_icons/email%402x.png');
     }
 }
 .icon-link .print-icon {
-    background: url(images/small_icons/printer.png) no-repeat 0 2px;
+    background: url(/images/small_icons/printer.png) no-repeat 0 2px;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2111,11 +2111,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .print-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/printer%402x.png');
+        background-image: url('/images/small_icons/printer%402x.png');
     }
 }
 .icon-link .add-icon {
-    background: url(images/small_icons/add.png) no-repeat;
+    background: url(/images/small_icons/add.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2125,11 +2125,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .add-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/add%402x.png');
+        background-image: url('/images/small_icons/add%402x.png');
     }
 }
 .icon-link .star-icon {
-    background: url(images/small_icons/star3.png) no-repeat;
+    background: url(/images/small_icons/star3.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2139,11 +2139,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .star-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/star3%402x.png');
+        background-image: url('/images/small_icons/star3%402x.png');
     }
 }
 .icon-link .heart-icon {
-    background: url(images/small_icons/heart2.png) no-repeat;
+    background: url(/images/small_icons/heart2.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2153,11 +2153,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .heart-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/heart2%402x.png');
+        background-image: url('/images/small_icons/heart2%402x.png');
     }
 }
 .icon-link .twitter-icon {
-    background: url(images/small_icons/twitter.png) no-repeat;
+    background: url(/images/small_icons/twitter.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2167,11 +2167,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .twitter-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/twitter%402x.png');
+        background-image: url('/images/small_icons/twitter%402x.png');
     }
 }
 .icon-link .download-icon {
-    background: url(images/small_icons/download2.png) no-repeat;
+    background: url(/images/small_icons/download2.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2181,11 +2181,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .download-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/download2%402x.png');
+        background-image: url('/images/small_icons/download2%402x.png');
     }
 }
 .icon-link .phone-icon {
-    background: url(images/small_icons/phone.png) no-repeat;
+    background: url(/images/small_icons/phone.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2195,11 +2195,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .phone-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/phone%402x.png');
+        background-image: url('/images/small_icons/phone%402x.png');
     }
 }
 .icon-link .link-icon {
-    background: url(images/small_icons/link.png) no-repeat;
+    background: url(/images/small_icons/link.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2209,11 +2209,11 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .link-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/link%402x.png');
+        background-image: url('/images/small_icons/link%402x.png');
     }
 }
 .icon-link .exlink-icon {
-    background: url(images/small_icons/ex_link.png) no-repeat;
+    background: url(/images/small_icons/ex_link.png) no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2223,7 +2223,7 @@ only screen and (min-resolution: 144dpi) {
 
     .icon-link .exlink-icon {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/ex_link%402x.png');
+        background-image: url('/images/small_icons/ex_link%402x.png');
     }
 }
 /* basic list */
@@ -2267,14 +2267,14 @@ ul.arrowlist li:before {
     width: 16px;
     height: 16px;
     content: " ";
-    background: url(images/arrow_bullet.png) center center no-repeat;
+    background: url(/images/arrow_bullet.png) center center no-repeat;
     display: inline-block;
     float: left;
     margin-left: -30px;
     background-color: #555;
 }
 ul.checklist li {
-    background: url(images/check_ico.png) left 7px no-repeat;
+    background: url(/images/check_ico.png) left 7px no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2284,11 +2284,11 @@ only screen and (min-resolution: 144dpi) {
 
     ul.checklist li {
         background-size: 12px 12px;
-        background-image: url('images/check_ico%402x.png');
+        background-image: url('/images/check_ico%402x.png');
     }
 }
 ul.bulletlist li {
-    background: url(images/bullet_ico.png) left 7px no-repeat;
+    background: url(/images/bullet_ico.png) left 7px no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2298,12 +2298,12 @@ only screen and (min-resolution: 144dpi) {
 
     ul.bulletlist li {
         background-size: 12px 12px;
-        background-image: url('images/bullet_ico%402x.png');
+        background-image: url('/images/bullet_ico%402x.png');
     }
 }
 ul.linelist li {
     padding: 5px 0;
-    background: url(images/s_line.png) bottom repeat-x;
+    background: url(/images/s_line.png) bottom repeat-x;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2313,12 +2313,12 @@ only screen and (min-resolution: 144dpi) {
 
     ul.linelist li {
         background-size: 1px 2px;
-        background-image: url('images/s_line%402x.png');
+        background-image: url('/images/s_line%402x.png');
     }
 }
 ul.dashedlist li {
     padding: 5px 0;
-    background: url(images/dashed.png) bottom repeat-x;
+    background: url(/images/dashed.png) bottom repeat-x;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2328,12 +2328,12 @@ only screen and (min-resolution: 144dpi) {
 
     ul.dashedlist li {
         background-size: 6px 1px;
-        background-image: url('images/dashed%402x.png');
+        background-image: url('/images/dashed%402x.png');
     }
 }
 ul.dottedlist li {
     padding: 5px 0;
-    background: url(images/dotted.png) bottom repeat-x;
+    background: url(/images/dotted.png) bottom repeat-x;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2343,7 +2343,7 @@ only screen and (min-resolution: 144dpi) {
 
     ul.dottedlist li {
         background-size: 5px 1px;
-        background-image: url('images/dotted%402x.png');
+        background-image: url('/images/dotted%402x.png');
     }
 }
 /* CTA Box */
@@ -2392,7 +2392,7 @@ div.top a:hover {
 }
 /* pullquote */
 .pullquote-right, .pullquote-left {
-    background: transparent url(images/openquote.png) 15px 0 no-repeat;
+    background: transparent url(/images/openquote.png) 15px 0 no-repeat;
     float: right;
     width: 33%;
     margin: 20px 0 0 20px;
@@ -2405,7 +2405,7 @@ div.top a:hover {
     margin-right: 20px;
 }
 .pullquote {
-    background: transparent url(images/openquote.png) 10px 0 no-repeat;
+    background: transparent url(/images/openquote.png) 10px 0 no-repeat;
     text-align: center;
     margin: 30px 0 0;
     display: block;
@@ -2470,7 +2470,7 @@ div.top a:hover {
     color: #444;
     border: 1px solid #ddd;
     background-color: #fff;
-    background: url(images/code_bg.png) repeat;
+    background: url(/images/code_bg.png) repeat;
     white-space: nowrap;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
@@ -2481,7 +2481,7 @@ only screen and (min-resolution: 144dpi) {
 
     .code, .pre {
         background-size: 5px 42px;
-        background-image: url('images/code_bg%402x.png');
+        background-image: url('/images/code_bg%402x.png');
     }
 }
 /* text highlights */
@@ -2535,7 +2535,7 @@ only screen and (min-resolution: 144dpi) {
     font: 11px verdana;
 }
 .tooltip_tip {
-    background: url(images/tooltip-tip.png) no-repeat 50% -2px transparent;
+    background: url(/images/tooltip-tip.png) no-repeat 50% -2px transparent;
     height: 20px;
     position: relative;
     top: -1px;
@@ -2549,7 +2549,7 @@ only screen and (min-resolution: 144dpi) {
 
     .tooltip_tip {
         background-size: 26px 13px;
-        background-image: url('images/tooltip-tip%402x.png');
+        background-image: url('/images/tooltip-tip%402x.png');
     }
 }
 /* lightbox */
@@ -2572,7 +2572,7 @@ only screen and (min-resolution: 144dpi) {
     text-align: center;
     font: italic 16px/26px Georgia, "Times New Roman", Times, serif;
     color: #828282;
-    background: url(images/openquote.png) 10px 0 no-repeat;
+    background: url(/images/openquote.png) 10px 0 no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2582,7 +2582,7 @@ only screen and (min-resolution: 144dpi) {
 
     .sc-testimonials li.testimonial, .pullquote-right, .pullquote-left, .pullquote  {
         background-size: 29px 26px;
-        background-image: url('images/openquote%402x.png');
+        background-image: url('/images/openquote%402x.png');
     }
 }
 .sc-testimonials li.testimonial p {
@@ -2701,7 +2701,7 @@ only screen and (min-resolution: 144dpi) {
     color: #A48200;
 }
 .info-box-warning {
-    background-image: url(images/small_icons/warning_icon.png);
+    background-image: url(/images/small_icons/warning_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2711,11 +2711,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-warning  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/warning_icon%402x.png');
+        background-image: url('/images/small_icons/warning_icon%402x.png');
     }
 }
 .info-box-close {
-    background-image: url(images/small_icons/close_icon.png);
+    background-image: url(/images/small_icons/close_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2725,11 +2725,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-close  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/close_icon%402x.png');
+        background-image: url('/images/small_icons/close_icon%402x.png');
     }
 }
 .info-box-error {
-    background-image: url(images/small_icons/error_icon.png);
+    background-image: url(/images/small_icons/error_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2739,11 +2739,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-error  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/error_icon%402x.png');
+        background-image: url('/images/small_icons/error_icon%402x.png');
     }
 }
 .info-box-info {
-    background-image: url(images/small_icons/info_icon.png);
+    background-image: url(/images/small_icons/info_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2753,11 +2753,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-info  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/info_icon%402x.png');
+        background-image: url('/images/small_icons/info_icon%402x.png');
     }
 }
 .info-box-note {
-    background-image: url(images/small_icons/note_icon.gif);
+    background-image: url(/images/small_icons/note_icon.gif);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2767,11 +2767,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-note  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/note_icon%402x.png');
+        background-image: url('/images/small_icons/note_icon%402x.png');
     }
 }
 .info-box-twitter {
-    background-image: url(images/small_icons/twitter_icon.png);
+    background-image: url(/images/small_icons/twitter_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2781,11 +2781,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-twitter  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/twitter_icon%402x.png');
+        background-image: url('/images/small_icons/twitter_icon%402x.png');
     }
 }
 .info-box-rss {
-    background-image: url(images/small_icons/rss_icon.png);
+    background-image: url(/images/small_icons/rss_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2795,11 +2795,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-rss  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/rss_icon%402x.png');
+        background-image: url('/images/small_icons/rss_icon%402x.png');
     }
 }
 .info-box-star {
-    background-image: url(images/small_icons/star_icon.png);
+    background-image: url(/images/small_icons/star_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2809,11 +2809,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-star  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/star_icon%402x.png');
+        background-image: url('/images/small_icons/star_icon%402x.png');
     }
 }
 .info-box-heart {
-    background-image: url(images/small_icons/heart_icon.png);
+    background-image: url(/images/small_icons/heart_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2823,11 +2823,11 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-heart  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/heart_icon%402x.png');
+        background-image: url('/images/small_icons/heart_icon%402x.png');
     }
 }
 .info-box-download {
-    background-image: url(images/small_icons/download_icon.png);
+    background-image: url(/images/small_icons/download_icon.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2837,7 +2837,7 @@ only screen and (min-resolution: 144dpi) {
 
     .info-box-download  {
         background-size: 16px 16px;
-        background-image: url('images/small_icons/download_icon%402x.png');
+        background-image: url('/images/small_icons/download_icon%402x.png');
     }
 }
 /* slideshow shortcode */
@@ -2931,7 +2931,7 @@ only screen and (min-resolution: 144dpi) {
     padding-bottom: 0 !important;
 }
 .toggle-head .arrow, .acc-item .arrow, .toggle-head .minus .arrow, .acc-head .arrow {
-    background: url(images/toggle_acc.png) 0 0 no-repeat;
+    background: url(/images/toggle_acc.png) 0 0 no-repeat;
     width: 8px;
     height: 8px;
     display: block;
@@ -2939,7 +2939,7 @@ only screen and (min-resolution: 144dpi) {
     margin: 7px 15px 0 0;
 }
 .toggle-head .minus .arrow, .acc-head .current .arrow {
-    background: url(images/toggle_acc.png) -10px 0 no-repeat;
+    background: url(/images/toggle_acc.png) -10px 0 no-repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -2949,7 +2949,7 @@ only screen and (min-resolution: 144dpi) {
 
     .toggle-head .arrow, .acc-item .arrow, .toggle-head .minus .arrow, .acc-head .arrow, .toggle-head .minus .arrow, .acc-head .current .arrow  {
         background-size: 18px 8px;
-        background-image: url('images/toggle_acc%402x.png');
+        background-image: url('/images/toggle_acc%402x.png');
     }
 }
 .toggle-body, .acc-content {
