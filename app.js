@@ -15,12 +15,6 @@ Database and Models
 mongoose.connect("mongodb://localhost/myapp");
 
 var gameSchema = new mongoose.Schema({
-    gameName: String,
-    firstImage: String,
-    secondImage: String,
-    thirdImage: String,
-    fourthImage: String,
-    fifthImage: String,
 });
 
 var game = mongoose.model('games', gameSchema);
