@@ -58,7 +58,7 @@ app.get("/", function (req, res) {
 });
 
 
-app.get("/game/lol", function (req, res) {
+app.get("/lol", function (req, res) {
 
     res.render("game");
 
