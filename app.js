@@ -58,6 +58,11 @@ app.get("/", function (req, res) {
 });
 
 
+app.get("/game/lol", function (req, res) {
+
+    res.render("games");
+
+});
 
 
 http.createServer(app).listen(3000);
