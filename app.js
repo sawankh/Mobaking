@@ -64,5 +64,70 @@ app.get("/lol", function (req, res) {
 
 });
 
+app.get("/dota2", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/airmech", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/hos", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/ic", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/smite", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/overwatch", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/strife", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/hon", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/mww", function (req, res) {
+
+    res.render("game");
+
+});
+
+app.get("/world", function (req, res) {
+
+    res.render("world");
+
+});
+
+app.get("/about", function (req, res) {
+
+    res.render("about");
+
+});
 
 http.createServer(app).listen(3000);
