@@ -235,9 +235,9 @@ if __name__ == '__main__':
     endyear = sys.argv[4]
     keywords = sys.argv[5:]
 
-    path = '/Users/clintonboys/Downloads'
+    path = '../data'
 
-    scrapings_dir = 'gt_{0}'.format(keywords[0])
+    scrapings_dir = 'mobaking_{0}'.format(keywords[0])
     if not os.path.exists(path+"/"+scrapings_dir):
         os.makedirs(path+"/"+scrapings_dir)
 
