@@ -217,7 +217,7 @@ if __name__ == '__main__':
 
     path = '/Users/Sawan/Downloads'
 
-    scrapings_dir = 'gt_{0}'.format(keywords[0])
+    scrapings_dir = 'keyword_{0}'.format(keywords[0])
     if not os.path.exists(path+"/"+scrapings_dir):
         os.makedirs(path+"/"+scrapings_dir)
 
