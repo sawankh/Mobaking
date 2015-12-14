@@ -203,7 +203,7 @@ def StitchFrames():
 
     final_data_frame.to_csv(final_name, sep=',')
 
-## run as python gt_scraper.py startMonth startYear endMonth endYear keyword_list
+## run as python mobaking_scraper.py startMonth startYear endMonth endYear keyword_list
 
 if __name__ == '__main__':
 
@@ -222,6 +222,5 @@ if __name__ == '__main__':
         os.makedirs(path+"/"+scrapings_dir)
 
     ScrapeRange(keywords, int(startMonth), int(startYear), int(endMonth), int(endYear))
-    ScrapeRangeWeekly(keywords, int(startMonth), int(startYear), int(endMonth), int(endYear))
-
+    
     StitchFrames()
