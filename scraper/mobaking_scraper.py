@@ -61,6 +61,7 @@ def ScrapeRange(keyword, startMonth, startYear, endMonth, endYear):
                     oldname = path+'/'+files[i]
                     no = oldname.split('(')[1].split(')')[0]
                     newname = path+'/report'+no+'.csv'
+                    print newname
                     os.rename(oldname,newname)
             except OSError:
                 pass
@@ -215,9 +216,9 @@ if __name__ == '__main__':
     endYear = sys.argv[4]
     keywords = sys.argv[5:]
 
-    path = '/Users/Sawan/Downloads'
+    path = '../data'
 
-    scrapings_dir = 'keyword_{0}'.format(keywords[0])
+    scrapingsDir = 'keyword_{0}'.format(keywords[0])
     if not os.path.exists(path+"/"+scrapings_dir):
         os.makedirs(path+"/"+scrapings_dir)
 
