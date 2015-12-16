@@ -122,8 +122,8 @@ def ScrapeRangeWeekly(keyword, startmonth, startyear, endmonth, endyear):
 
     time.sleep(7)
     
-    oldname = path+'/'+'report.csv'
-    newname = path+'/'+'weekly_data.csv'
+    oldname = 'report.csv'
+    newname = 'weekly_data.csv'
     os.rename(oldname,newname)
 
     shutil.move(newname,path+'/'+scrapings_dir)
@@ -235,11 +235,13 @@ if __name__ == '__main__':
     endyear = sys.argv[4]
     keywords = sys.argv[5:]
 
-    path = '../data'
+    path = '/data'
 
     scrapings_dir = 'mobaking_{0}'.format(keywords[0])
     if not os.path.exists(path+"/"+scrapings_dir):
         os.makedirs(path+"/"+scrapings_dir)
+
+    os.chdir(path + '/' + scrapings_dir)
 
     ScrapeRange(keywords, int(startmonth), int(startyear), int(endmonth), int(endyear))
     ScrapeRangeWeekly(keywords, int(startmonth), int(startyear), int(endmonth), int(endyear))
