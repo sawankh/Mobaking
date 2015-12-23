@@ -58,6 +58,7 @@ app.get("/", function (req, res) {
 });
 
 
+//----------------------------- LOL ----------------------------- //
 app.get("/lol", function (req, res) {
 
     res.render("game", {
@@ -66,6 +67,48 @@ app.get("/lol", function (req, res) {
 
 });
 
+app.get("/lol/intro", function (req, res) {
+
+    res.render("intro", {
+        currentGame: "lol",
+    });
+
+});
+
+app.get("/lol/2014", function (req, res) {
+
+    res.render("date_14", {
+        currentGame: "lol",
+    });
+
+});
+
+app.get("/lol/2015", function (req, res) {
+
+    res.render("date_15", {
+        currentGame: "lol",
+    });
+
+});
+
+app.get("/lol/world", function (req, res) {
+
+    res.render("game_world", {
+        currentGame: "lol",
+    });
+
+});
+
+app.get("/lol/future", function (req, res) {
+
+    res.render("future", {
+        currentGame: "lol",
+    });
+
+});
+
+
+//----------------------------- DOTA 2 ----------------------------- //
 app.get("/dota2", function (req, res) {
 
     res.render("game", {
@@ -74,6 +117,8 @@ app.get("/dota2", function (req, res) {
 
 });
 
+
+//----------------------------- AIRMECH ----------------------------- //
 app.get("/airmech", function (req, res) {
 
     res.render("game", {
@@ -82,6 +127,7 @@ app.get("/airmech", function (req, res) {
 
 });
 
+//----------------------------- HOS ----------------------------- //
 app.get("/hos", function (req, res) {
 
     res.render("game", {
@@ -90,6 +136,7 @@ app.get("/hos", function (req, res) {
 
 });
 
+//----------------------------- IC ----------------------------- //
 app.get("/ic", function (req, res) {
 
     res.render("game", {
@@ -98,6 +145,7 @@ app.get("/ic", function (req, res) {
 
 });
 
+//----------------------------- SMITE ----------------------------- //
 app.get("/smite", function (req, res) {
 
     res.render("game", {
@@ -106,6 +154,7 @@ app.get("/smite", function (req, res) {
 
 });
 
+//----------------------------- OVERWATCH ----------------------------- //
 app.get("/overwatch", function (req, res) {
 
     res.render("game", {
@@ -114,6 +163,7 @@ app.get("/overwatch", function (req, res) {
 
 });
 
+//----------------------------- STRIFE ----------------------------- //
 app.get("/strife", function (req, res) {
 
     res.render("game", {
@@ -122,6 +172,7 @@ app.get("/strife", function (req, res) {
 
 });
 
+//----------------------------- HON ----------------------------- //
 app.get("/hon", function (req, res) {
 
     res.render("game", {
@@ -130,6 +181,7 @@ app.get("/hon", function (req, res) {
 
 });
 
+//----------------------------- MWW ----------------------------- //
 app.get("/mww", function (req, res) {
 
     res.render("game", {
