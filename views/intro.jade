@@ -3,14 +3,14 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     title Mobaking: There's only one King
-    link(rel='stylesheet', href='css/flexslider.css', type='text/css', media='screen')
-    link(rel='stylesheet', type='text/css', href='/css/style.css', media='screen')
-    link(rel='stylesheet', href='css/prettyPhoto.css', type='text/css', media='screen')
-    link(rel='stylesheet', href='css/supersized.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='../css/flexslider.css', type='text/css', media='screen')
+    link(rel='stylesheet', type='text/css', href='../css/style.css', media='screen')
+    link(rel='stylesheet', href='../css/prettyPhoto.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='../css/supersized.css', type='text/css', media='screen')
     //
       if lt IE 9link(rel='stylesheet', href='css/ie.css', type='text/css', media='screen')
     // MOBILE SETTINGS
-    link(rel='stylesheet', href='css/responsive.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='../css/responsive.css', type='text/css', media='screen')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     //
       if lt IE 9script(src='js/css3-mediaqueries.js')
@@ -18,25 +18,25 @@ html(lang='en')
       if lte IE 9link(rel='stylesheet', href='css/ie8.css', type='text/css', media='screen')
     //
       if IE 7link(rel='stylesheet', href='css/ie7.css', type='text/css', media='screen')
-    link#mediaelementjs-styles-css(rel='stylesheet', href='css/mediaelementplayer.min.css', type='text/css', media='all')
-    script(type='text/javascript', src='js/comment-reply.min.html')
-    script(type='text/javascript', src='js/jquery.js')
-    script(type='text/javascript', src='js/jquery-migrate.min.html')
-    script(type='text/javascript', src='js/jquery.easing.1.3.js')
-    script(type='text/javascript', src='js/jquery.tools.min.js')
-    script(type='text/javascript', src='js/jquery.flexslider-min.js')
-    script(type='text/javascript', src='js/jquery.prettyPhoto.js')
-    script(type='text/javascript', src='js/jquery.isotope.min.js')
-    script(type='text/javascript', src='js/selectnav.min.js')
-    script(type='text/javascript', src='js/mejs/mediaelement-and-player.min.js')
-    script(type='text/javascript', src='js/supersized.3.2.7.min.js')
-    script(type='text/javascript', src='js/audio.js')
-    script(type='text/javascript', src='js/custom.js')
-    script(type='text/javascript', src='js/init.js')
+    link#mediaelementjs-styles-css(rel='stylesheet', href='../css/mediaelementplayer.min.css', type='text/css', media='all')
+    script(type='text/javascript', src='../js/comment-reply.min.html')
+    script(type='text/javascript', src='../js/jquery.js')
+    script(type='text/javascript', src='../js/jquery-migrate.min.html')
+    script(type='text/javascript', src='../js/jquery.easing.1.3.js')
+    script(type='text/javascript', src='../js/jquery.tools.min.js')
+    script(type='text/javascript', src='../js/jquery.flexslider-min.js')
+    script(type='text/javascript', src='../js/jquery.prettyPhoto.js')
+    script(type='text/javascript', src='../js/jquery.isotope.min.js')
+    script(type='text/javascript', src='../js/selectnav.min.js')
+    script(type='text/javascript', src='../js/mejs/mediaelement-and-player.min.js')
+    script(type='text/javascript', src='../js/supersized.3.2.7.min.js')
+    script(type='text/javascript', src='../js/audio.js')
+    script(type='text/javascript', src='../js/custom.js')
+    script(type='text/javascript', src='../js/init.js')
     link(href='http://fonts.googleapis.com/css?family=Droid+Sans', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Oswald:700,400,300', rel='stylesheet', type='text/css')
     // custom styles
-    link(rel='stylesheet', type='text/css', href='/css/custom.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='../css/custom.css', media='screen')
   body.home
     .social-in-homepage.social-bookmarks
       ul
@@ -271,11 +271,11 @@ html(lang='en')
       // Components
       slide_links       : 'blank',  // Individual links for each slide (Options: false, 'num', 'name', 'blank')
       slides          :   [     // Slideshow Images
-      {image : 'images/backgrounds/#{currentGame}/1.jpg',  thumb : 'images/backgrounds/#{currentGame}/1.jpg', url : ''} ,
-      {image : 'images/backgrounds/#{currentGame}/2.jpg',  thumb : 'images/backgrounds/#{currentGame}/2.jpg', url : ''} ,
-      {image : 'images/backgrounds/#{currentGame}/3.jpg',  thumb : 'images/backgrounds/#{currentGame}/3.jpg', url : ''} ,
-      {image : 'images/backgrounds/#{currentGame}/4.jpg', thumb : 'images/backgrounds/#{currentGame}/4.jpg', url : ''} ,
-      {image : 'images/backgrounds/#{currentGame}/5.jpg', thumb : 'images/backgrounds/#{currentGame}/5.jpg', url : ''}]
+      {image : '../images/backgrounds/#{currentGame}/1.jpg',  thumb : '../images/backgrounds/#{currentGame}/1.jpg', url : ''} ,
+      {image : '../images/backgrounds/#{currentGame}/2.jpg',  thumb : '../images/backgrounds/#{currentGame}/2.jpg', url : ''} ,
+      {image : '../images/backgrounds/#{currentGame}/3.jpg',  thumb : '../images/backgrounds/#{currentGame}/3.jpg', url : ''} ,
+      {image : '../images/backgrounds/#{currentGame}/4.jpg', thumb : '../images/backgrounds/#{currentGame}/4.jpg', url : ''} ,
+      {image : '../images/backgrounds/#{currentGame}/5.jpg', thumb : '../images/backgrounds/#{currentGame}/5.jpg', url : ''}]
       });
       }
       );
@@ -292,9 +292,9 @@ html(lang='en')
     #controls-wrap.load-item
       a#nextslide.load-item
       a#play-button
-        img#pauseplay(data-retina='true', alt='', src='images/slider/pause.png')
+        img#pauseplay(data-retina='true', alt='', src='../images/slider/pause.png')
       a#prevslide.load-item
       p.copyright Powered by Mobaking team. All rights reserved.
       a#tray-button
-        img#tray-arrow(data-retina='true', src='images/slider/button-tray-up.png')
+        img#tray-arrow(data-retina='true', src='../images/slider/button-tray-up.png')
       a#shutdown(href='#') ShutDown
