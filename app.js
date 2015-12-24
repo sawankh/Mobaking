@@ -12,7 +12,7 @@ var app = express();
 /*
 Database and Models
 */
-mongoose.connect("mongodb://localhost/myapp");
+mongoose.connect("mongodb://localhost/mobaking");
 
 var gameSchema = new mongoose.Schema({
 });
