@@ -144,34 +144,28 @@ html(lang='en')
                     ul.slides
                       li
                         .frame
-                          a(href='http://youtu.be/PpE-w3Idik8', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
-                            img(width='820', height='600', src='images/5569874075_5f02473218_o.jpg', alt='Aliquam tincidunt mauris')
-                            span.video
-                      li
-                        .frame
-                          a(href='images/6104272986_859582c0df_b.jpg', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
-                            img(width='820', height='600', src='images/6104272986_859582c0df_b.jpg', alt='Aliquam tincidunt mauris')
+                          a(href='#{gameInfo[0].image1}', title='screen 1', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='#{gameInfo[0].image1}', alt='screen 1')
                             span.zoom
                       li
                         .frame
-                          a(href='images/5108410074_2221a3164b_b.jpg', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
-                            img(width='820', height='600', src='images/5108410074_2221a3164b_b.jpg', alt='Aliquam tincidunt mauris')
+                          a(href='#{gameInfo[0].image2}', title='screen 2', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='#{gameInfo[0].image2}', alt='screen 2')
                             span.zoom
                       li
                         .frame
-                          a(href='images/5107756473_155f8a6ba6_o.jpg', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
-                            img(width='820', height='600', src='images/5107756473_155f8a6ba6_o.jpg', alt='Aliquam tincidunt mauris')
+                          a(href='#{gameInfo[0].image3}', title='screen 3', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='#{gameInfo[0].image3}', alt='screen 3')
                             span.zoom
                     // [/slides]
                   // [/flexslider]
                   .portfolio-info
                     h3.folio-title
-                      a(title='Aliquam tincidunt mauris', href='#') Aliquam tincidunt mauris
+                      a(title='Aliquam tincidunt mauris', href='#') Screens of the game
                     .folio-cats
-                      a(href='#') Video
+                      a(href='#') #{gameInfo[0].name}
                     p
-                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                      | Sed egestas,...
+                      | #{gameInfo[0].description}
                   // [/portfolio-info]
                 // [/folio-box]
                 .navi
