@@ -19,7 +19,9 @@ var gameSchema = new mongoose.Schema({
     logo: String,
     videoUrl: String,
     description: String,
-    images: [String]
+    image1: String,
+    image2: String,
+    image3: String
 });
 
 var game = mongoose.model('games', gameSchema);
