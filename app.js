@@ -15,6 +15,11 @@ Database and Models
 mongoose.connect("mongodb://localhost/mobaking");
 
 var gameSchema = new mongoose.Schema({
+    name: String,
+    logo: String,
+    videoUrl: String,
+    description: String,
+    images: [String]
 });
 
 var game = mongoose.model('games', gameSchema);
