@@ -187,7 +187,7 @@ app.get("/airmech", function (req, res) {
 });
 
 app.get("/airmech/intro", function (req, res) {
-    game.find({'name': 'AirMech'}, function (err, result) {
+    game.find({'name': 'Airmech'}, function (err, result) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "airmech",
