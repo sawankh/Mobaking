@@ -114,7 +114,7 @@ html(lang='en')
       }
       );
     #wrap.clearfix.no-sidebar
-      #main
+      #main.portfolio
         #entries
           h2.page-title
             | Introduction 
@@ -131,24 +131,380 @@ html(lang='en')
           #entries-box
             .post-item
               .entry
+                p You can write a text here if you prefer. It’s optional.
                 p
-                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat
-                blockquote.pullquote-left
-                  p
-                    | mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                p
-                  | Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
-                p
-                  | Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.
-                p
-                  | Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
                 .fix
               // [/entry]
             // [/post-item]
+            #filters
+              ul
+                li
+                  a(href='#', title='') PSD
+                li
+                  a(href='#', title='') HTML
+                li
+                  a(href='#', title='') Design
+                li
+                  a(href='#', title='') CSS
+                li
+                  a(href='#', title='') Wordpress
+                li
+                  a(href='#', title='') Video
+            // [/filters]
+            #portfolio
+              .entry
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='http://youtu.be/PpE-w3Idik8', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='images/5569874075_5f02473218_o.jpg', alt='Aliquam tincidunt mauris')
+                            span.video
+                      li
+                        .frame
+                          a(href='images/6104272986_859582c0df_b.jpg', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='images/6104272986_859582c0df_b.jpg', alt='Aliquam tincidunt mauris')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5108410074_2221a3164b_b.jpg', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='images/5108410074_2221a3164b_b.jpg', alt='Aliquam tincidunt mauris')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5107756473_155f8a6ba6_o.jpg', title='Aliquam tincidunt mauris', rel='prettyPhoto[gallery-a]')
+                            img(width='820', height='600', src='images/5107756473_155f8a6ba6_o.jpg', alt='Aliquam tincidunt mauris')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Aliquam tincidunt mauris', href='#') Aliquam tincidunt mauris
+                    .folio-cats
+                      a(href='#') Video
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                      | Sed egestas,...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/5107798959_a73e8fc631_o.jpg', title='Vivamus vestibulum', rel='prettyPhoto[gallery-b]')
+                            img(width='820', height='600', src='images/5107798959_a73e8fc631_o.jpg', alt='Vivamus vestibulum')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5277520480_f83d4cb276_o.jpg', title='Vivamus vestibulum', rel='prettyPhoto[gallery-b]')
+                            img(width='820', height='600', src='images/5277520480_f83d4cb276_o.jpg', alt='Vivamus vestibulum')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5107756473_155f8a6ba6_o.jpg', title='Vivamus vestibulum', rel='prettyPhoto[gallery-b]')
+                            img(width='820', height='600', src='images/5107756473_155f8a6ba6_o.jpg', alt='Vivamus vestibulum')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7403284828_274fac8472_b.jpg', title='Vivamus vestibulum', rel='prettyPhoto[gallery-b]')
+                            img(width='820', height='600', src='images/7403284828_274fac8472_b.jpg', alt='Vivamus vestibulum')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Vivamus vestibulum', href='#') Vivamus vestibulum
+                    .folio-cats
+                      a(href='#') CSS
+                      | , 
+                      a(href='#') Design
+                      | , 
+                      a(href='#') PSD
+                    // [/folio-cats]
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/5107756473_155f8a6ba6_o.jpg', title='Cras iaculis ultricies nulla', rel='prettyPhoto[gallery-c]')
+                            img(width='820', height='600', src='images/5107756473_155f8a6ba6_o.jpg', alt='Cras iaculis ultricies nulla')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5108410074_2221a3164b_b.jpg', title='Cras iaculis ultricies nulla', rel='prettyPhoto[gallery-c]')
+                            img(width='820', height='600', src='images/5108410074_2221a3164b_b.jpg', alt='Cras iaculis ultricies nulla')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5569874075_5f02473218_o.jpg', title='Cras iaculis ultricies nulla', rel='prettyPhoto[gallery-c]')
+                            img(width='820', height='600', src='images/5569874075_5f02473218_o.jpg', alt='Cras iaculis ultricies nulla')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7399504584_fb57b92e17_b.jpg', title='Cras iaculis ultricies nulla', rel='prettyPhoto[gallery-c]')
+                            img(width='820', height='600', src='images/7399504584_fb57b92e17_b.jpg', alt='Cras iaculis ultricies nulla')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Cras iaculis ultricies nulla', href='#') Cras iaculis ultricies nulla
+                    .folio-cats
+                      a(href='#') HTML
+                      | , 
+                      a(href='#') PSD
+                      | , 
+                      a(href='#') Wordpress
+                    // [/folio-cats]
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/5108411746_af25694584_o.jpg', title='Donec odio quisque', rel='prettyPhoto[gallery-d]')
+                            img(width='820', height='600', src='images/5108411746_af25694584_o.jpg', alt='Donec odio quisque')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/6104272986_859582c0df_b.jpg', title='Donec odio quisque', rel='prettyPhoto[gallery-d]')
+                            img(width='820', height='600', src='images/6104272986_859582c0df_b.jpg', alt='Donec odio quisque')
+                            span.zoom
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Donec odio quisque', href='#') Donec odio quisque
+                    .folio-cats
+                      a(href='#') CSS
+                      | , 
+                      a(href='#') Design
+                      | , 
+                      a(href='#') HTML
+                    // [/folio-cats]
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/5277520480_f83d4cb276_o.jpg', title='Vivamus molestie gravida turpis', rel='prettyPhoto[gallery-e]')
+                            img(width='820', height='600', src='images/5277520480_f83d4cb276_o.jpg', alt='Vivamus molestie gravida turpis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7403284828_274fac8472_b.jpg', title='Vivamus molestie gravida turpis', rel='prettyPhoto[gallery-e]')
+                            img(width='820', height='600', src='images/7403284828_274fac8472_b.jpg', alt='Vivamus molestie gravida turpis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7399504584_fb57b92e17_b.jpg', title='Vivamus molestie gravida turpis', rel='prettyPhoto[gallery-e]')
+                            img(width='820', height='600', src='images/7399504584_fb57b92e17_b.jpg', alt='Vivamus molestie gravida turpis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7399503680_7f57bca900_b.jpg', title='Vivamus molestie gravida turpis', rel='prettyPhoto[gallery-e]')
+                            img(width='820', height='600', src='images/7399503680_7f57bca900_b.jpg', alt='Vivamus molestie gravida turpis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5569874075_5f02473218_o.jpg', title='Vivamus molestie gravida turpis', rel='prettyPhoto[gallery-e]')
+                            img(width='820', height='600', src='images/5569874075_5f02473218_o.jpg', alt='Vivamus molestie gravida turpis')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Vivamus molestie gravida turpis', href='#') Vivamus molestie gravida turpis
+                    .folio-cats
+                      a(href='#') HTML
+                      | , 
+                      a(href='#') PSD
+                      | , 
+                      a(href='#') Wordpress
+                    // [/folio-cats]
+                    p
+                      | Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/7403284828_274fac8472_b.jpg', title='Quisque volutpat mattis', rel='prettyPhoto[gallery-f]')
+                            img(width='820', height='600', src='images/7403284828_274fac8472_b.jpg', alt='Quisque volutpat mattis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7399504584_fb57b92e17_b.jpg', title='Quisque volutpat mattis', rel='prettyPhoto[gallery-f]')
+                            img(width='820', height='600', src='images/7399504584_fb57b92e17_b.jpg', alt='Quisque volutpat mattis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7399503680_7f57bca900_b.jpg', title='Quisque volutpat mattis', rel='prettyPhoto[gallery-f]')
+                            img(width='820', height='600', src='images/7399503680_7f57bca900_b.jpg', alt='Quisque volutpat mattis')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/6104272986_859582c0df_b.jpg', title='Quisque volutpat mattis', rel='prettyPhoto[gallery-f]')
+                            img(width='820', height='600', src='images/6104272986_859582c0df_b.jpg', alt='Quisque volutpat mattis')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Quisque volutpat mattis', href='#') Quisque volutpat mattis
+                    .folio-cats
+                      a(href='#') CSS
+                      | , 
+                      a(href='#') Design
+                      | , 
+                      a(href='#') PSD
+                      | , 
+                      a(href='#') Wordpress
+                    // [/folio-cats]
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/7399504584_fb57b92e17_b.jpg', title='Fusce pellentesque suscipit', rel='prettyPhoto[gallery-g]')
+                            img(width='820', height='600', src='images/7399504584_fb57b92e17_b.jpg', alt='Fusce pellentesque suscipit')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5107798959_a73e8fc631_o.jpg', title='Fusce pellentesque suscipit', rel='prettyPhoto[gallery-g]')
+                            img(width='820', height='600', src='images/5107798959_a73e8fc631_o.jpg', alt='Fusce pellentesque suscipit')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5107756473_155f8a6ba6_o.jpg', title='Fusce pellentesque suscipit', rel='prettyPhoto[gallery-g]')
+                            img(width='820', height='600', src='images/5107756473_155f8a6ba6_o.jpg', alt='Fusce pellentesque suscipit')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Fusce pellentesque suscipit', href='#') Fusce pellentesque suscipit
+                    .folio-cats
+                      a(href='#') HTML
+                      | , 
+                      a(href='#') PSD
+                      | , 
+                      a(href='#') Wordpress
+                    // [/folio-cats]
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse...
+                  // [/portfolio-info]
+                // [/folio-box]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/7399503680_7f57bca900_b.jpg', title='Sit amet goes here', rel='prettyPhoto[gallery-h]')
+                            img(width='820', height='600', src='images/7399503680_7f57bca900_b.jpg', alt='Sit amet goes here')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5569874075_5f02473218_o.jpg', title='Sit amet goes here', rel='prettyPhoto[gallery-h]')
+                            img(width='820', height='600', src='images/5569874075_5f02473218_o.jpg', alt='Sit amet goes here')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5108411746_af25694584_o.jpg', title='Sit amet goes here', rel='prettyPhoto[gallery-h]')
+                            img(width='820', height='600', src='images/5108411746_af25694584_o.jpg', alt='Sit amet goes here')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5277520480_f83d4cb276_o.jpg', title='Sit amet goes here', rel='prettyPhoto[gallery-h]')
+                            img(width='820', height='600', src='images/5277520480_f83d4cb276_o.jpg', alt='Sit amet goes here')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Sit amet goes here', href='#') Sit amet goes here
+                    .folio-cats
+                      a(href='#') Design
+                      | , 
+                      a(href='#') PSD
+                      | , 
+                      a(href='#') Wordpress
+                    // [/folio-cats]
+                    p
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse...
+                  // [/portfolio-info]
+                .folio-box.clearfix
+                  .flexslider.portfolio-item-slideshow
+                    ul.slides
+                      li
+                        .frame
+                          a(href='images/6104272986_859582c0df_b.jpg', title='Integer malesuada commodo', rel='prettyPhoto[gallery-i]')
+                            img(width='820', height='600', src='images/6104272986_859582c0df_b.jpg', alt='Integer malesuada commodo')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7399504584_fb57b92e17_b.jpg', title='Integer malesuada commodo', rel='prettyPhoto[gallery-i]')
+                            img(width='820', height='600', src='images/7399504584_fb57b92e17_b.jpg', alt='Integer malesuada commodo')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5108411746_af25694584_o.jpg', title='Integer malesuada commodo', rel='prettyPhoto[gallery-i]')
+                            img(width='820', height='600', src='images/5108411746_af25694584_o.jpg', alt='Integer malesuada commodo')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/5107756473_155f8a6ba6_o.jpg', title='Integer malesuada commodo', rel='prettyPhoto[gallery-i]')
+                            img(width='820', height='600', src='images/5107756473_155f8a6ba6_o.jpg', alt='Integer malesuada commodo')
+                            span.zoom
+                      li
+                        .frame
+                          a(href='images/7403284828_274fac8472_b.jpg', title='Integer malesuada commodo', rel='prettyPhoto[gallery-i]')
+                            img(width='820', height='600', src='images/7403284828_274fac8472_b.jpg', alt='Integer malesuada commodo')
+                            span.zoom
+                    // [/slides]
+                  // [/flexslider]
+                  .portfolio-info
+                    h3.folio-title
+                      a(title='Integer malesuada commodo', href='#') Integer malesuada commodo
+                    .folio-cats
+                      a(href='#') CSS
+                      | , 
+                      a(href='#') Design
+                    p
+                      | Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida...
+                  // [/portfolio-info]
+                .navi
+                  .wp-pagenavi
+                    span.pages Page 1 of 2
+                    span.current 1
+                    a.page(href='#', title='2') 2
+                    a(href='#') »
+                // [/navi]
+              // .entry
+            // #portfolio
           // [/entries-box]
-        // [/entries]
+        // /entries
       // [/main]
-    // [/wrap]      
+    // [/wrap]   
     a#scrollup(href='#') Scroll
     // [/scrollup]
     #progress-back.load-item
