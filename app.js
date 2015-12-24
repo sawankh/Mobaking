@@ -84,11 +84,12 @@ app.get("/lol", function (req, res) {
 });
 
 app.get("/lol/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "lol",
+    game.find({'name': 'League of Legends'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "lol",
+        });
     });
-
 });
 
 app.get("/lol/2014", function (req, res) {
@@ -134,11 +135,12 @@ app.get("/dota2", function (req, res) {
 });
 
 app.get("/dota2/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "dota2",
+    game.find({'name': 'Dota 2'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "dota2",
+        });
     });
-
 });
 
 app.get("/dota2/2014", function (req, res) {
@@ -183,11 +185,12 @@ app.get("/airmech", function (req, res) {
 });
 
 app.get("/airmech/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "airmech",
+    game.find({'name': 'AirMech'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "airmech",
+        });
     });
-
 });
 
 app.get("/airmech/2014", function (req, res) {
@@ -232,11 +235,12 @@ app.get("/hos", function (req, res) {
 });
 
 app.get("/hos/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "hos",
+    game.find({'name': 'Heroes of the Storm'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "hos",
+        });
     });
-
 });
 
 app.get("/hos/2014", function (req, res) {
@@ -281,11 +285,12 @@ app.get("/ic", function (req, res) {
 });
 
 app.get("/ic/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "ic",
+    game.find({'name': 'Infinite Crisis'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "ic",
+        });
     });
-
 });
 
 app.get("/ic/2014", function (req, res) {
@@ -330,11 +335,12 @@ app.get("/smite", function (req, res) {
 });
 
 app.get("/smite/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "smite",
+    game.find({'name': 'Smite'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "smite",
+        });
     });
-
 });
 
 app.get("/smite/2014", function (req, res) {
@@ -379,11 +385,12 @@ app.get("/overwatch", function (req, res) {
 });
 
 app.get("/overwatch/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "overwatch",
+    game.find({'name': 'Overwatch'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "overwatch",
+        });
     });
-
 });
 
 app.get("/overwatch/2014", function (req, res) {
@@ -428,11 +435,12 @@ app.get("/strife", function (req, res) {
 });
 
 app.get("/strife/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "strife",
+    game.find({'name': 'Strife'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "strife",
+        });
     });
-
 });
 
 app.get("/strife/2014", function (req, res) {
@@ -477,11 +485,12 @@ app.get("/hon", function (req, res) {
 });
 
 app.get("/hon/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "hon",
+    game.find({'name': 'Heroes of Newerth'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "hon",
+        });
     });
-
 });
 
 app.get("/hon/2014", function (req, res) {
@@ -526,11 +535,12 @@ app.get("/mww", function (req, res) {
 });
 
 app.get("/mww/intro", function (req, res) {
-
-    res.render("intro", {
-        currentGame: "mww",
+    game.find({'name': 'Magicka Wizard Wars'}, function (err, result) {
+        res.render('intro', {
+            gameInfo: result,
+            currentGame: "mww",
+        });
     });
-
 });
 
 app.get("/mww/2014", function (req, res) {
