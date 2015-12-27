@@ -5,13 +5,13 @@ from random import randint
 
 google_username = 'pytrends@gmail.com'
 google_password = 'datascience'
-path = "/Users/Sawan/Desktop/pytrends-master/examples/"
+path = ""
 
 # connect to Google
 connector = pyGTrends(google_username, google_password)
 
 # make request
-files = ["lol", "dota 2", "hon", "hos", "ic", "mww", "overwatch", "smite", "strife"]
+files = ["lol", "dota 2", "hon", "hos", "ic", "mww", "overwatch", "smite", "strife","airmech"]
 
 for fi in files:
 	if not os.path.exists(path+fi):
