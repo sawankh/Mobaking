@@ -1356,38 +1356,6 @@
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 45922550"
                             }
                         }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 1448389,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 1448389"
-                            }
-                        },
-                        "newyork": {
-                            "value": 426800,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 426800"
-                            }
-                        },
-                        "sydney": {
-                            "value": 1401819,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 1401819"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 644440,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 644440"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 143237,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 143237"
-                            }
-                        }
                     }
                 },
                 "2004": {
@@ -2741,38 +2709,6 @@
                             "href": "http://en.wikipedia.org/w/index.php?search=Zimbabwe",
                             "tooltip": {
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 20860629"
-                            }
-                        }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 1257410,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 1257410"
-                            }
-                        },
-                        "newyork": {
-                            "value": 741339,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 741339"
-                            }
-                        },
-                        "sydney": {
-                            "value": 992774,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 992774"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 639740,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 639740"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 987219,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 987219"
                             }
                         }
                     }
@@ -4130,38 +4066,6 @@
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 49351883"
                             }
                         }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 647388,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 647388"
-                            }
-                        },
-                        "newyork": {
-                            "value": 530194,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 530194"
-                            }
-                        },
-                        "sydney": {
-                            "value": 1034216,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 1034216"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 1088263,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 1088263"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 1182471,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 1182471"
-                            }
-                        }
                     }
                 },
                 "2006": {
@@ -5515,38 +5419,6 @@
                             "href": "http://en.wikipedia.org/w/index.php?search=Zimbabwe",
                             "tooltip": {
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 39908420"
-                            }
-                        }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 345666,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 345666"
-                            }
-                        },
-                        "newyork": {
-                            "value": 673834,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 673834"
-                            }
-                        },
-                        "sydney": {
-                            "value": 897241,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 897241"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 639227,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 639227"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 493835,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 493835"
                             }
                         }
                     }
@@ -6904,38 +6776,6 @@
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 33945474"
                             }
                         }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 860840,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 860840"
-                            }
-                        },
-                        "newyork": {
-                            "value": 608978,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 608978"
-                            }
-                        },
-                        "sydney": {
-                            "value": 784192,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 784192"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 348101,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 348101"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 567407,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 567407"
-                            }
-                        }
                     }
                 },
                 "2008": {
@@ -8289,38 +8129,6 @@
                             "href": "http://en.wikipedia.org/w/index.php?search=Zimbabwe",
                             "tooltip": {
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 41056406"
-                            }
-                        }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 1432752,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 1432752"
-                            }
-                        },
-                        "newyork": {
-                            "value": 1478595,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 1478595"
-                            }
-                        },
-                        "sydney": {
-                            "value": 678662,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 678662"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 1226606,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 1226606"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 1080530,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 1080530"
                             }
                         }
                     }
@@ -9678,38 +9486,6 @@
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 53987699"
                             }
                         }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 382495,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 382495"
-                            }
-                        },
-                        "newyork": {
-                            "value": 881903,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 881903"
-                            }
-                        },
-                        "sydney": {
-                            "value": 695496,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 695496"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 392706,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 392706"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 1491797,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 1491797"
-                            }
-                        }
                     }
                 },
                 "2010": {
@@ -11063,38 +10839,6 @@
                             "href": "http://en.wikipedia.org/w/index.php?search=Zimbabwe",
                             "tooltip": {
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 3713961"
-                            }
-                        }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 1062415,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 1062415"
-                            }
-                        },
-                        "newyork": {
-                            "value": 224371,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 224371"
-                            }
-                        },
-                        "sydney": {
-                            "value": 1430787,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 1430787"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 1220624,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 1220624"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 1391053,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 1391053"
                             }
                         }
                     }
@@ -12452,38 +12196,6 @@
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 14012930"
                             }
                         }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 1006104,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 1006104"
-                            }
-                        },
-                        "newyork": {
-                            "value": 867719,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 867719"
-                            }
-                        },
-                        "sydney": {
-                            "value": 111877,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 111877"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 1090827,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 1090827"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 849390,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 849390"
-                            }
-                        }
                     }
                 },
                 "2012": {
@@ -13837,38 +13549,6 @@
                             "href": "http://en.wikipedia.org/w/index.php?search=Zimbabwe",
                             "tooltip": {
                                 "content": "<span style=\"font-weight:bold;\">Zimbabwe</span><br />Population : 57040464"
-                            }
-                        }
-                    },
-                    "plots": {
-                        "paris": {
-                            "value": 678406,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 678406"
-                            }
-                        },
-                        "newyork": {
-                            "value": 279913,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 279913"
-                            }
-                        },
-                        "sydney": {
-                            "value": 747363,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 747363"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 140032,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 140032"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 769153,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 769153"
                             }
                         }
                     }
@@ -15227,90 +14907,15 @@
                             }
                         }
                     },
-                    "plots": {
-                        "paris": {
-                            "value": 1025415,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Paris</span><br />Population: 1025415"
-                            }
-                        },
-                        "newyork": {
-                            "value": 785175,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">New-York</span><br />Population: 785175"
-                            }
-                        },
-                        "sydney": {
-                            "value": 477087,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Sydney</span><br />Population: 477087"
-                            }
-                        },
-                        "brasilia": {
-                            "value": 211212,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Brasilia</span><br />Population: 211212"
-                            }
-                        },
-                        "tokyo": {
-                            "value": 433935,
-                            "tooltip": {
-                                "content": "<span style=\"font-weight:bold;\">Tokyo</span><br />Population: 433935"
-                            }
-                        }
-                    }
                 }
             };
 
             // Default plots params
-            var plots = {
-                "paris": {
-                    "latitude": 48.86,
-                    "longitude": 2.3444,
-                    "text": {
-                        "position": "left",
-                        "content": "Paris"
-                    },
-                    "href": "http://en.wikipedia.org/w/index.php?search=Paris"
-                },
-                "newyork": {
-                    "latitude": 40.667,
-                    "longitude": -73.833,
-                    "text": {
-                        "content": "New york"
-                    },
-                    "href": "http://en.wikipedia.org/w/index.php?search=New York"
-                },
-                "sydney": {
-                    "latitude": -33.917,
-                    "longitude": 151.167,
-                    "text": {
-                        "content": "Sydney"
-                    },
-                    "href": "http://en.wikipedia.org/w/index.php?search=Sidney"
-                },
-                "brasilia": {
-                    "latitude": -15.781682,
-                    "longitude": -47.924195,
-                    "text": {
-                        "content": "Brasilia"
-                    },
-                    "href": "http://en.wikipedia.org/w/index.php?search=Brasilia"
-                },
-                "tokyo": {
-                    "latitude": 35.687418,
-                    "longitude": 139.692306,
-                    "text": {
-                        "content": "Tokyo"
-                    },
-                    "href": "http://en.wikipedia.org/w/index.php?search=Tokyo"
-                }
-            };
 
             // Knob initialisation (for selecting a year)
             jq(".knob").knob({
                 release: function (value) {
-                    $(".world").trigger('update', [{
+                    jq(".world").trigger('update', [{
                         mapOptions: data[value],
                         animDuration: 300
                     }]);
@@ -15387,55 +14992,10 @@
                     plot: {
                         display: true,
                         title: "City population",
-                        marginBottom: 6,
-                        slices: [
-                            {
-                                type: "circle",
-                                max: 500000,
-                                attrs: {
-                                    fill: "#FD4851",
-                                    "stroke-width": 1
-                                },
-                                attrsHover: {
-                                    transform: "s1.5",
-                                    "stroke-width": 1
-                                },
-                                label: "Less than 500 000",
-                                size: 10
-                            },
-                            {
-                                type: "circle",
-                                min: 500000,
-                                max: 1000000,
-                                attrs: {
-                                    fill: "#FD4851",
-                                    "stroke-width": 1
-                                },
-                                attrsHover: {
-                                    transform: "s1.5",
-                                    "stroke-width": 1
-                                },
-                                label: "Between 500 000 and 1M",
-                                size: 20
-                            },
-                            {
-                                type: "circle",
-                                min: 1000000,
-                                attrs: {
-                                    fill: "#FD4851",
-                                    "stroke-width": 1
-                                },
-                                attrsHover: {
-                                    transform: "s1.5",
-                                    "stroke-width": 1
-                                },
-                                label: "More than 1M",
-                                size: 30
-                            }
-                        ]
-                    }
+                        marginBottom: 6
+                        }
                 },
-                plots: jq.extend(true, {}, data[2009]['plots'], plots),
+                plots: jq.extend(true, {}, data[2009]['plots']),
                 areas: data[2009]['areas']
             });
         });
