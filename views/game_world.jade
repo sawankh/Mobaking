@@ -37,6 +37,66 @@ html(lang='en')
     link(href='http://fonts.googleapis.com/css?family=Oswald:700,400,300', rel='stylesheet', type='text/css')
     // custom styles
     link(rel='stylesheet', type='text/css', href='../css/custom.css', media='screen')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js', charset='utf-8')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js', charset='utf-8')
+    script(src='../js/jquery.mapael.js', charset='utf-8')
+    script(src='https://rawgit.com/aterrien/jQuery-Knob/master/dist/jquery.knob.min.js', charset='utf-8')
+    script(src='../js/maps/world_countries.js', charset='utf-8')
+    script(src='../js/worldMap.js', charset='utf-8')
+    style(type='text/css').
+      .mapael .mapTooltip {
+      position: absolute;
+      background-color: #fff;
+      moz-opacity: 0.80;
+      opacity: 0.80;
+      filter: alpha(opacity=80);
+      border-radius: 4px;
+      padding: 10px;
+      z-index: 1000;
+      max-width: 200px;
+      display: none;
+      color: #232323;
+      }
+      .mapael .map {
+      background-color: #232323;
+      border-radius: 5px;
+      }
+      /* For all zoom buttons */
+      .mapael .zoomButton {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      color: #000;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      text-align: center;
+      border-radius: 3px;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      font-weight: bold;
+      left: 10px;
+      -webkit-user-select: none;
+      -khtml-user-select : none;
+      -moz-user-select: none;
+      -o-user-select : none;
+      user-select: none;
+      }
+      /* Reset Zoom button first */
+      .mapael .zoomReset {
+      top: 44%;
+      left: 5%;
+      }
+      /* Then Zoom In button */
+      .mapael .zoomIn {
+      top: 48%;
+      left: 5%;
+      }
+      /* Then Zoom Out button */
+      .mapael .zoomOut {
+      top: 52%;
+      left: 5%;
+      }    
   body.home
     #wrap-wide
     // [/wrap-wide]
@@ -131,17 +191,16 @@ html(lang='en')
           #entries-box
             .post-item
               .entry
-                p
-                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat
-                blockquote.pullquote-left
-                  p
-                    | mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                p
-                  | Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
-                p
-                  | Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.
-                p
-                  | Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.
+                .world
+                  .map
+                  div(style='clear: both;')
+                  .one_half
+                    h2 Select a year
+                    .knobContainer
+                      input.knob(data-width='80', data-height='80', data-min='2003', data-max='2013', data-cursor='true', data-fgcolor='#454545', data-thickness='.45', value='2009', data-bgcolor='#c7e8ff')
+                  .one_half.last
+                    .areaLegend
+                    .plotLegend
                 .fix
               // [/entry]
             // [/post-item]
