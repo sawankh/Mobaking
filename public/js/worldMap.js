@@ -14911,7 +14911,7 @@
             };
 
             // Default plots params
-
+            console.log(data);
             // Knob initialisation (for selecting a year)
             jq(".knob").knob({
                 release: function (value) {
