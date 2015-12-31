@@ -29,7 +29,7 @@ var dataSchema = new mongoose.Schema({
 });
 
 var Document = mongoose.model('world', documentSchema);
-var Data = mongoose.model('data', documentSchema);
+var Data = mongoose.model('data', dataSchema);
 
 /**
 * Global variables

@@ -22,7 +22,25 @@ var gameSchema = new mongoose.Schema({
     images: [String]
 });
 
+var worldSchema = new mongoose.Schema({
+    country: String,
+    value: Number,
+    game: String,
+    period: String,
+    year: String,
+});
+
+var dataSchema = new mongoose.Schema({
+    value: Number,
+    game: String,
+    period: String,
+    year: String,
+});
+
+var Document = mongoose.model('world', worldSchema);
+var Data = mongoose.model('data', dataSchema);
 var game = mongoose.model('games', gameSchema);
+
 /*
 Middlewares and configurations 
 */
