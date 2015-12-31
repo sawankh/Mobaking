@@ -111,19 +111,21 @@ app.get("/lol/intro", function (req, res) {
 });
 
 app.get("/lol/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "lol",
-    });
-
+    Data.find({'game': 'lol', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "lol",
+        });
+    });    
 });
 
 app.get("/lol/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "lol",
-    });
-
+    Data.find({'game': 'lol', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "lol",
+        });
+    });    
 });
 
 app.get("/lol/world", function (req, res) {
@@ -163,19 +165,21 @@ app.get("/dota2/intro", function (req, res) {
 });
 
 app.get("/dota2/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "dota2",
-    });
-
+    Data.find({'game': 'dota2', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "dota2",
+        });
+    });    
 });
 
 app.get("/dota2/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "dota2",
-    });
-
+    Data.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "dota2",
+        });
+    });    
 });
 
 app.get("/dota2/world", function (req, res) {
@@ -214,19 +218,21 @@ app.get("/airmech/intro", function (req, res) {
 });
 
 app.get("/airmech/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "airmech",
-    });
-
+    Data.find({'game': 'airmech', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "airmech",
+        });
+    });    
 });
 
 app.get("/airmech/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "airmech",
-    });
-
+    Data.find({'game': 'airmech', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "airmech",
+        });
+    });    
 });
 
 app.get("/airmech/world", function (req, res) {
@@ -265,19 +271,21 @@ app.get("/hos/intro", function (req, res) {
 });
 
 app.get("/hos/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "hos",
-    });
-
+    Data.find({'game': 'hos', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "hos",
+        });
+    });    
 });
 
 app.get("/hos/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "hos",
-    });
-
+    Data.find({'game': 'hos', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "hos",
+        });
+    });    
 });
 
 app.get("/hos/world", function (req, res) {
@@ -315,19 +323,21 @@ app.get("/ic/intro", function (req, res) {
 });
 
 app.get("/ic/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "ic",
-    });
-
+    Data.find({'game': 'ic', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "ic",
+        });
+    });    
 });
 
 app.get("/ic/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "ic",
-    });
-
+    Data.find({'game': 'ic', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "ic",
+        });
+    });    
 });
 
 app.get("/ic/world", function (req, res) {
@@ -365,19 +375,21 @@ app.get("/smite/intro", function (req, res) {
 });
 
 app.get("/smite/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "smite",
-    });
-
+    Data.find({'game': 'smite', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "smite",
+        });
+    });    
 });
 
 app.get("/smite/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "smite",
+    Data.find({'game': 'smite', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "smite",
+        });
     });
-
 });
 
 app.get("/smite/world", function (req, res) {
@@ -416,19 +428,21 @@ app.get("/overwatch/intro", function (req, res) {
 });
 
 app.get("/overwatch/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "overwatch",
+    Data.find({'game': 'overwatch', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "overwatch",
+        });
     });
-
 });
 
 app.get("/overwatch/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "overwatch",
+    Data.find({'game': 'overwatch', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "overwatch",
+        });
     });
-
 });
 
 app.get("/overwatch/world", function (req, res) {
@@ -467,19 +481,21 @@ app.get("/strife/intro", function (req, res) {
 });
 
 app.get("/strife/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "strife",
-    });
-
+    Data.find({'game': 'strife', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "strife",
+        });
+    });    
 });
 
 app.get("/strife/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "strife",
+    Data.find({'game': 'strife', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "strife",
+        });
     });
-
 });
 
 app.get("/strife/world", function (req, res) {
@@ -518,19 +534,21 @@ app.get("/hon/intro", function (req, res) {
 });
 
 app.get("/hon/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "hon",
+    Data.find({'game': 'hon', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "hon",
+        });
     });
-
 });
 
 app.get("/hon/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "hon",
+    Data.find({'game': 'hon', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "hon",
+        });
     });
-
 });
 
 app.get("/hon/world", function (req, res) {
@@ -569,19 +587,21 @@ app.get("/mww/intro", function (req, res) {
 });
 
 app.get("/mww/2014", function (req, res) {
-
-    res.render("date_14", {
-        currentGame: "mww",
+    Data.find({'game': 'mww', 'year': '2014'}, function (err, result) {
+        res.render("date_14", {
+            data: result,
+            currentGame: "mww",
+        });
     });
-
 });
 
 app.get("/mww/2015", function (req, res) {
-
-    res.render("date_15", {
-        currentGame: "mww",
+    Data.find({'game': 'mww', 'year': '2015'}, function (err, result) {
+        res.render("date_15", {
+            data: result,
+            currentGame: "mww",
+        });
     });
-
 });
 
 app.get("/mww/world", function (req, res) {
