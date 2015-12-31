@@ -37,7 +37,7 @@ var dataSchema = new mongoose.Schema({
     year: String,
 });
 
-var Document = mongoose.model('world', worldSchema);
+var World = mongoose.model('world', worldSchema);
 var Data = mongoose.model('data', dataSchema);
 var game = mongoose.model('games', gameSchema);
 
@@ -127,11 +127,12 @@ app.get("/lol/2015", function (req, res) {
 });
 
 app.get("/lol/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "lol",
-    });
-
+    World.find({'game': 'lol'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "lol",
+        }); 
+    });    
 });
 
 app.get("/lol/future", function (req, res) {
@@ -178,11 +179,12 @@ app.get("/dota2/2015", function (req, res) {
 });
 
 app.get("/dota2/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "dota2",
-    });
-
+    World.find({'game': 'dota2'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "dota2",
+        });
+    });    
 });
 
 app.get("/dota2/future", function (req, res) {
@@ -228,11 +230,12 @@ app.get("/airmech/2015", function (req, res) {
 });
 
 app.get("/airmech/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "airmech",
-    });
-
+    World.find({'game': 'airmech'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "airmech",
+        });
+    });    
 });
 
 app.get("/airmech/future", function (req, res) {
@@ -278,11 +281,11 @@ app.get("/hos/2015", function (req, res) {
 });
 
 app.get("/hos/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "hos",
-    });
-
+    World.find({'game': 'hos'}, function (err, result) {
+        res.render("game_world", {
+            currentGame: "hos",
+        });
+    });    
 });
 
 app.get("/hos/future", function (req, res) {
@@ -378,11 +381,12 @@ app.get("/smite/2015", function (req, res) {
 });
 
 app.get("/smite/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "smite",
-    });
-
+    World.find({'game': 'smite'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "smite",
+        });
+    });    
 });
 
 app.get("/smite/future", function (req, res) {
@@ -428,11 +432,12 @@ app.get("/overwatch/2015", function (req, res) {
 });
 
 app.get("/overwatch/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "overwatch",
-    });
-
+    World.find({'game': 'overwatch'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "overwatch",
+        });
+    });    
 });
 
 app.get("/overwatch/future", function (req, res) {
@@ -478,11 +483,12 @@ app.get("/strife/2015", function (req, res) {
 });
 
 app.get("/strife/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "strife",
+    World.find({'game': 'strife'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "strife",
+        });
     });
-
 });
 
 app.get("/strife/future", function (req, res) {
@@ -528,11 +534,12 @@ app.get("/hon/2015", function (req, res) {
 });
 
 app.get("/hon/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "hon",
-    });
-
+    World.find({'game': 'hon'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "hon",
+        });
+    });    
 });
 
 app.get("/hon/future", function (req, res) {
@@ -578,11 +585,12 @@ app.get("/mww/2015", function (req, res) {
 });
 
 app.get("/mww/world", function (req, res) {
-
-    res.render("game_world", {
-        currentGame: "mww",
+    World.find({'game': 'mww'}, function (err, result) {
+        res.render("game_world", {
+            worldData: result,
+            currentGame: "mww",
+        });
     });
-
 });
 
 app.get("/mww/future", function (req, res) {
