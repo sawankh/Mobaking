@@ -4,9 +4,15 @@ var fs = require("fs"),
 	mongoose = require('mongoose'),
 	walk = require('walk');
 
-
+/**
+* MongoDB connection
+**/
 mongoose.connect("mongodb://localhost/mobaking");
 
+
+/**
+* Collection Schemas
+**/
 var documentSchema = new mongoose.Schema({
 	country: String,
 	value: Number,
@@ -25,11 +31,17 @@ var dataSchema = new mongoose.Schema({
 var Document = mongoose.model('world', documentSchema);
 var Data = mongoose.model('data', documentSchema);
 
+/**
+* Global variables
+**/
 var files = [];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+/**
+* Crawl along all the directories and subdirectories
+**/
 // Walker options
-var walker  = walk.walk('data', { followLinks: false });
+var walker  = walk.walk('../data', { followLinks: false });
 
 walker.on('file', function(root, stat, next) {
     // Add this file to the list of files
@@ -45,6 +57,9 @@ walker.on('end', function() {
     };
 });
 
+/**
+* Read file check type and insert into MongoDB collection
+**/
 function readFile(file) {
 	var rl = readline.createInterface({
 	    input: fs.createReadStream(file),
@@ -55,6 +70,8 @@ function readFile(file) {
 	rl.on("line", function(line) {
 		if (line != "" && line.indexOf("Month") == -1) {
 			var checkType = containsAny(line, months);
+			
+			// If data type file
 			if (checkType != null) {
 				var arr = line.split(",");
 				
@@ -76,8 +93,8 @@ function readFile(file) {
 					if (err) console.log("Error!");
 					else console.log("Inserted successfully!");
 				});
+			// Otherwise world data type file	
 			} else {
-				//console.log("Got line: " + line);
 				var arr = line.split(",");	
 				var fileExtention = file.split("/");
 				var name = fileExtention[1];
@@ -94,10 +111,8 @@ function readFile(file) {
 				} else if (name.indexOf("Nov") > -1) {
 					name = "November/December";
 				};
-				//console.log(name);
+				
 				var info = fileExtention[0].split("\\");
-				//console.log(info[2]);	
-				//console.log(countries.getAlpha2Code(arr[0], 'en'));
 				var code = countries.getAlpha2Code(arr[0], 'en');
 				var value = arr[1];
 				var game = info[1];
@@ -123,6 +138,9 @@ function readFile(file) {
 	}); 
 }
 
+/**
+* Checks if a string contains any of substrings
+**/
 function containsAny(str, substrings) {
      for (var i = 0; i != substrings.length; i++) {
         var substring = substrings[i];
