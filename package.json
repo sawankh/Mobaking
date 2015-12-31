@@ -9,6 +9,9 @@
     "express": "3.0.0rc4",
     "jade": "*",
     "nodemon": "*",
-    "mongoose" : "*"
+    "mongoose" : "*",
+    "readline" : "*",
+    "walk" :  "*",
+    "i18n-iso-countries" : "*"
   }
 }
