@@ -44,8 +44,7 @@ html(lang='en')
     script(src='../js/maps/world_countries.js', charset='utf-8')
     script(type='text/javascript').
       //var worlData = [];
-      var test = !{JSON.stringify(worldData)};
-      console.log(test);
+      var world_data = !{JSON.stringify(worldData)};
     script(src='../js/worldMap.js', charset='utf-8')
     style(type='text/css').
       .mapael .mapTooltip {
@@ -211,7 +210,7 @@ html(lang='en')
                   .one_half
                     h2 Select a year
                     .knobContainer
-                      input.knob(data-width='80', data-height='80', data-min='2003', data-max='2013', data-cursor='true', data-fgcolor='#454545', data-thickness='.45', value='2009', data-bgcolor='#c7e8ff')
+                      input.knob(data-width='100', data-height='100', data-min='0', data-max='5', data-cursor='true', data-fgcolor='#454545', data-thickness='.3', value='0', data-bgcolor='#c7e8ff')
                   .one_half.last
                     .areaLegend
                     .plotLegend
