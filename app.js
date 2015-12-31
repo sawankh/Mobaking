@@ -130,9 +130,18 @@ app.get("/lol/2015", function (req, res) {
     });    
 });
 
-app.get("/lol/world", function (req, res) {
-    World.find({'game': 'lol'}, function (err, result) {
-        res.render("game_world", {
+app.get("/lol/world2014", function (req, res) {
+    World.find({'game': 'lol', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "lol",
+        }); 
+    });    
+});
+
+app.get("/lol/world2015", function (req, res) {
+    World.find({'game': 'lol', 'year': '2014'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "lol",
         }); 
@@ -184,9 +193,18 @@ app.get("/dota2/2015", function (req, res) {
     });    
 });
 
+app.get("/dota2/world2014", function (req, res) {
+    World.find({'game': 'dota2', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "dota2",
+        });
+    });    
+});
+
 app.get("/dota2/world", function (req, res) {
-    World.find({'game': 'dota2'}, function (err, result) {
-        res.render("game_world", {
+    World.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "dota2",
         });
@@ -237,15 +255,23 @@ app.get("/airmech/2015", function (req, res) {
     });    
 });
 
-app.get("/airmech/world", function (req, res) {
-    World.find({'game': 'airmech'}, function (err, result) {
-        res.render("game_world", {
+app.get("/airmech/world2014", function (req, res) {
+    World.find({'game': 'airmech', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
             worldData: result,
             currentGame: "airmech",
         });
     });    
 });
 
+app.get("/airmech/world2015", function (req, res) {
+    World.find({'game': 'airmech', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
+            worldData: result,
+            currentGame: "airmech",
+        });
+    });    
+});
 app.get("/airmech/future", function (req, res) {
 
     res.render("future", {
@@ -290,9 +316,17 @@ app.get("/hos/2015", function (req, res) {
     });    
 });
 
-app.get("/hos/world", function (req, res) {
-    World.find({'game': 'hos'}, function (err, result) {
-        res.render("game_world", {
+app.get("/hos/world2014", function (req, res) {
+    World.find({'game': 'hos', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            currentGame: "hos",
+        });
+    });    
+});
+
+app.get("/hos/world2015", function (req, res) {
+    World.find({'game': 'hos', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             currentGame: "hos",
         });
     });    
@@ -342,12 +376,22 @@ app.get("/ic/2015", function (req, res) {
     });    
 });
 
-app.get("/ic/world", function (req, res) {
+app.get("/ic/world2014", function (req, res) {
+    World.find({'game': 'ic', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "ic",
+        });
+    });    
+});
 
-    res.render("game_world", {
-        currentGame: "ic",
-    });
-
+app.get("/ic/world2015", function (req, res) {
+    World.find({'game': 'ic', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
+            worldData: result,
+            currentGame: "ic",
+        });
+    });    
 });
 
 app.get("/ic/future", function (req, res) {
@@ -394,9 +438,18 @@ app.get("/smite/2015", function (req, res) {
     });
 });
 
-app.get("/smite/world", function (req, res) {
-    World.find({'game': 'smite'}, function (err, result) {
-        res.render("game_world", {
+app.get("/smite/world2014", function (req, res) {
+    World.find({'game': 'smite', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "smite",
+        });
+    });    
+});
+
+app.get("/smite/world2015", function (req, res) {
+    World.find({'game': 'smite', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "smite",
         });
@@ -447,9 +500,18 @@ app.get("/overwatch/2015", function (req, res) {
     });
 });
 
-app.get("/overwatch/world", function (req, res) {
-    World.find({'game': 'overwatch'}, function (err, result) {
-        res.render("game_world", {
+app.get("/overwatch/world2014", function (req, res) {
+    World.find({'game': 'overwatch', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "overwatch",
+        });
+    });    
+});
+
+app.get("/overwatch/world2015", function (req, res) {
+    World.find({'game': 'overwatch', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "overwatch",
         });
@@ -500,9 +562,18 @@ app.get("/strife/2015", function (req, res) {
     });
 });
 
-app.get("/strife/world", function (req, res) {
-    World.find({'game': 'strife'}, function (err, result) {
-        res.render("game_world", {
+app.get("/strife/world2014", function (req, res) {
+    World.find({'game': 'strife', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "strife",
+        });
+    });
+});
+
+app.get("/strife/world2015", function (req, res) {
+    World.find({'game': 'strife', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "strife",
         });
@@ -553,9 +624,18 @@ app.get("/hon/2015", function (req, res) {
     });
 });
 
-app.get("/hon/world", function (req, res) {
-    World.find({'game': 'hon'}, function (err, result) {
-        res.render("game_world", {
+app.get("/hon/world2014", function (req, res) {
+    World.find({'game': 'hon', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "hon",
+        });
+    });    
+});
+
+app.get("/hon/world2015", function (req, res) {
+    World.find({'game': 'hon', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "hon",
         });
@@ -606,9 +686,18 @@ app.get("/mww/2015", function (req, res) {
     });
 });
 
-app.get("/mww/world", function (req, res) {
-    World.find({'game': 'mww'}, function (err, result) {
-        res.render("game_world", {
+app.get("/mww/world2014", function (req, res) {
+    World.find({'game': 'mww', 'year': '2014'}, function (err, result) {
+        res.render("game_world_14", {
+            worldData: result,
+            currentGame: "mww",
+        });
+    });
+});
+
+app.get("/mww/world2015", function (req, res) {
+    World.find({'game': 'mww', 'year': '2015'}, function (err, result) {
+        res.render("game_world_15", {
             worldData: result,
             currentGame: "mww",
         });
