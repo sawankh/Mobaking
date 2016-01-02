@@ -96,12 +96,10 @@ app.get("/about", function (req, res) {
 
 //----------------------------- LOL ----------------------------- //
 app.get("/lol", function (req, res) {
-
     res.render("game", {
         currentGame: "lol",
         gameName: "League of Legends",
     });
-
 });
 
 app.get("/lol/intro", function (req, res) {
@@ -161,23 +159,22 @@ app.get("/lol/world2015", function (req, res) {
 });
 
 app.get("/lol/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "lol",
-        gameName: "League of Legends",
+    Data.find({'game': 'lol'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "lol",
+            gameName: "League of Legends",
+        });
     });
-
 });
 
 
 //----------------------------- DOTA 2 ----------------------------- //
 app.get("/dota2", function (req, res) {
-
     res.render("game", {
         currentGame: "dota2",
         gameName: "Dota 2",
     });
-
 });
 
 app.get("/dota2/intro", function (req, res) {
@@ -237,22 +234,21 @@ app.get("/dota2/world2015", function (req, res) {
 });
 
 app.get("/dota2/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "dota2",
-        gameName: "Dota 2",
+    Data.find({'game': 'dota2'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "dota2",
+            gameName: "Dota 2",
+        });
     });
-
 });
 
 //----------------------------- AIRMECH ----------------------------- //
 app.get("/airmech", function (req, res) {
-
     res.render("game", {
         currentGame: "airmech",
         gameName: "Airmech",
     });
-
 });
 
 app.get("/airmech/intro", function (req, res) {
@@ -311,22 +307,21 @@ app.get("/airmech/world2015", function (req, res) {
     });    
 });
 app.get("/airmech/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "airmech",
-        gameName: "Airmech",
+    Data.find({'game': 'airmech'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "airmech",
+            gameName: "Airmech",
+        });
     });
-
 });
 
 //----------------------------- HOS ----------------------------- //
 app.get("/hos", function (req, res) {
-
     res.render("game", {
         currentGame: "hos",
         gameName: "Heroes of the Storm",
     });
-
 });
 
 app.get("/hos/intro", function (req, res) {
@@ -384,22 +379,21 @@ app.get("/hos/world2015", function (req, res) {
 });
 
 app.get("/hos/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "hos",
-        gameName: "Heroes of the Storm",
+    Data.find({'game': 'hos'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "hos",
+            gameName: "Heroes of the Storm",
+        });
     });
-
 });
 
 //----------------------------- IC ----------------------------- //
 app.get("/ic", function (req, res) {
-
     res.render("game", {
         currentGame: "ic",
         gameName: "Infinite Crisis",
     });
-
 });
 
 app.get("/ic/intro", function (req, res) {
@@ -459,12 +453,13 @@ app.get("/ic/world2015", function (req, res) {
 });
 
 app.get("/ic/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "ic",
-        gameName: "Infinite Crisis",
+    Data.find({'game': 'ic'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "ic",
+            gameName: "Infinite Crisis",
+        });
     });
-
 });
 
 //----------------------------- SMITE ----------------------------- //
@@ -534,22 +529,21 @@ app.get("/smite/world2015", function (req, res) {
 });
 
 app.get("/smite/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "smite",
-        gameName: "Smite",
+    Data.find({'game': 'smite'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "smite",
+            gameName: "Smite",
+        });
     });
-
 });
 
 //----------------------------- OVERWATCH ----------------------------- //
 app.get("/overwatch", function (req, res) {
-
     res.render("game", {
         currentGame: "overwatch",
         gameName: "Overwatch",
     });
-
 });
 
 app.get("/overwatch/intro", function (req, res) {
@@ -609,22 +603,21 @@ app.get("/overwatch/world2015", function (req, res) {
 });
 
 app.get("/overwatch/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "overwatch",
-        gameName: "Overwatch",
+    Data.find({'game': 'overwatch'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "overwatch",
+            gameName: "Overwatch",
+        });
     });
-
 });
 
 //----------------------------- STRIFE ----------------------------- //
 app.get("/strife", function (req, res) {
-
     res.render("game", {
         currentGame: "strife",
         gameName: "Strife",
     });
-
 });
 
 app.get("/strife/intro", function (req, res) {
@@ -684,22 +677,21 @@ app.get("/strife/world2015", function (req, res) {
 });
 
 app.get("/strife/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "strife",
-        gameName: "Strife",
+    Data.find({'game': 'strife'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "strife",
+            gameName: "Strife",
+        });
     });
-
 });
 
 //----------------------------- HON ----------------------------- //
 app.get("/hon", function (req, res) {
-
     res.render("game", {
         currentGame: "hon",
         gameName: "Heroes of Newerth",
     });
-
 });
 
 app.get("/hon/intro", function (req, res) {
@@ -759,22 +751,21 @@ app.get("/hon/world2015", function (req, res) {
 });
 
 app.get("/hon/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "hon",
-        gameName: "Heroes of Newerth",
+    Data.find({'game': 'hon'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "hon",
+            gameName: "Heroes of Newerth",
+        });
     });
-
 });
 
 //----------------------------- MWW ----------------------------- //
 app.get("/mww", function (req, res) {
-
     res.render("game", {
         currentGame: "mww",
         gameName: "Magicka Wizard Wars",
     });
-
 });
 
 app.get("/mww/intro", function (req, res) {
@@ -834,12 +825,13 @@ app.get("/mww/world2015", function (req, res) {
 });
 
 app.get("/mww/future", function (req, res) {
-
-    res.render("future", {
-        currentGame: "mww",
-        gameName: "Magicka Wizard Wars",
+    Data.find({'game': 'mww'}, function (err, result) {
+        res.render("future", {
+            data: result,
+            currentGame: "mww",
+            gameName: "Magicka Wizard Wars",
+        });
     });
-
 });
 
 
