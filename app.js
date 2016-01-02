@@ -145,7 +145,7 @@ app.get("/lol/world2014", function (req, res) {
 });
 
 app.get("/lol/world2015", function (req, res) {
-    World.find({'game': 'lol', 'year': '2014'}, function (err, result) {
+    World.find({'game': 'lol', 'year': '2015'}, function (err, result) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "lol",

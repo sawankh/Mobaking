@@ -24,6 +24,43 @@ jqe(function () {
     var southAmerica = ['Argentina', 'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'French Guiana', 'Guyana', 'Nicaragua', 'Paraguay', 'Peru', 'Suriname', 'United Kingdom (Islands only)', 'Uruguay', 'Venezuela']; 
 
     var datos = [];
+    var africaValues = 0; 
+    var antarcticaValues = 0; 
+    var asiaValues = 0; 
+    var oceaniaValues = 0; 
+    var europeValues = 0; 
+    var northAmericaValues = 0; 
+    var southAmericaValues = 0;
+    console.log(europeValues);
+    for (var i = 0; i < world_data.length; i++) {
+        if (africa.indexOf(world_data[i].countryName) > -1) {
+            africaValues++;
+        } else if (antarctica.indexOf(world_data[i].countryName) > -1) {
+            antarcticaValues++;
+        } else if (asia.indexOf(world_data[i].countryName) > -1) {
+            asiaValues++;
+        } else if (europe.indexOf(world_data[i].countryName) > -1) {
+            europeValues++;
+        } else if (northAmerica.indexOf(world_data[i].countryName) > -1) {
+            northAmericaValues++;
+        } else if (southAmerica.indexOf(world_data[i].countryName) > -1) {
+            southAmericaValues++;
+        } else if (oceania.indexOf(world_data[i].countryName) > -1) {
+            oceaniaValues++;
+        };
+    };
+
+    console.log(world_data.length);
+    var percen = 100 / world_data.length;
+
+    datos.push(['Africa', percen * africaValues]);
+    datos.push(['Antarctica', percen * antarcticaValues]);
+    datos.push(['Asia', percen * asiaValues]);
+    datos.push(['Europe', percen * europeValues]);
+    datos.push(['North America', percen * northAmericaValues]);
+    datos.push(['South America', percen * southAmericaValues]);
+    datos.push(['Oceania', percen * oceaniaValues]);
+    console.log(world_data);
 
     jqe('#container').highcharts({
         chart: {
@@ -54,14 +91,7 @@ jqe(function () {
         series: [{
             type: 'pie',
             name: 'Continent Popularity',
-            data: [
-                ['Firefox', 45.0],
-                ['IE', 26.8],
-                ['Chrome', 12.8],
-                ['Safari', 8.5],
-                ['Opera', 6.2],
-                ['Others', 0.7]
-            ]
+            data: datos
         }]
     });
 });
