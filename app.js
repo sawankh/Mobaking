@@ -99,6 +99,7 @@ app.get("/lol", function (req, res) {
 
     res.render("game", {
         currentGame: "lol",
+        gameName: "League of Legends",
     });
 
 });
@@ -108,6 +109,7 @@ app.get("/lol/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "lol",
+            gameName: "League of Legends",
         });
     });
 });
@@ -117,6 +119,7 @@ app.get("/lol/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "lol",
+            gameName: "League of Legends",
         });
     });    
 });
@@ -126,6 +129,7 @@ app.get("/lol/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "lol",
+            gameName: "League of Legends",
         });
     });    
 });
@@ -135,6 +139,7 @@ app.get("/lol/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "lol",
+            gameName: "League of Legends",
         }); 
     });    
 });
@@ -144,6 +149,7 @@ app.get("/lol/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "lol",
+            gameName: "League of Legends",
         }); 
     });    
 });
@@ -152,6 +158,7 @@ app.get("/lol/future", function (req, res) {
 
     res.render("future", {
         currentGame: "lol",
+        gameName: "League of Legends",
     });
 
 });
@@ -162,6 +169,7 @@ app.get("/dota2", function (req, res) {
 
     res.render("game", {
         currentGame: "dota2",
+        gameName: "Dota 2",
     });
 
 });
@@ -171,6 +179,7 @@ app.get("/dota2/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "dota2",
+            gameName: "Dota 2",
         });
     });
 });
@@ -180,6 +189,7 @@ app.get("/dota2/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "dota2",
+            gameName: "Dota 2",
         });
     });    
 });
@@ -189,6 +199,7 @@ app.get("/dota2/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "dota2",
+            gameName: "Dota 2",
         });
     });    
 });
@@ -198,6 +209,7 @@ app.get("/dota2/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "dota2",
+            gameName: "Dota 2",
         });
     });    
 });
@@ -207,6 +219,7 @@ app.get("/dota2/world", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "dota2",
+            gameName: "Dota 2",
         });
     });    
 });
@@ -215,6 +228,7 @@ app.get("/dota2/future", function (req, res) {
 
     res.render("future", {
         currentGame: "dota2",
+        gameName: "Dota 2",
     });
 
 });
@@ -224,6 +238,7 @@ app.get("/airmech", function (req, res) {
 
     res.render("game", {
         currentGame: "airmech",
+        gameName: "Airmech",
     });
 
 });
@@ -233,6 +248,7 @@ app.get("/airmech/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "airmech",
+            gameName: "Airmech",
         });
     });
 });
@@ -242,6 +258,7 @@ app.get("/airmech/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "airmech",
+            gameName: "Airmech",
         });
     });    
 });
@@ -251,6 +268,7 @@ app.get("/airmech/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "airmech",
+            gameName: "Airmech",
         });
     });    
 });
@@ -260,6 +278,7 @@ app.get("/airmech/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "airmech",
+            gameName: "Airmech",
         });
     });    
 });
@@ -269,6 +288,7 @@ app.get("/airmech/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "airmech",
+            gameName: "Airmech",
         });
     });    
 });
@@ -276,6 +296,7 @@ app.get("/airmech/future", function (req, res) {
 
     res.render("future", {
         currentGame: "airmech",
+        gameName: "Airmech",
     });
 
 });
@@ -285,6 +306,7 @@ app.get("/hos", function (req, res) {
 
     res.render("game", {
         currentGame: "hos",
+        gameName: "Heroes of the Storm",
     });
 
 });
@@ -294,6 +316,7 @@ app.get("/hos/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "hos",
+            gameName: "Heroes of the Storm",
         });
     });
 });
@@ -303,6 +326,7 @@ app.get("/hos/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "hos",
+            gameName: "Heroes of the Storm",
         });
     });    
 });
@@ -312,6 +336,7 @@ app.get("/hos/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "hos",
+            gameName: "Heroes of the Storm",
         });
     });    
 });
@@ -320,6 +345,7 @@ app.get("/hos/world2014", function (req, res) {
     World.find({'game': 'hos', 'year': '2014'}, function (err, result) {
         res.render("game_world_14", {
             currentGame: "hos",
+            gameName: "Heroes of the Storm",
         });
     });    
 });
@@ -328,6 +354,7 @@ app.get("/hos/world2015", function (req, res) {
     World.find({'game': 'hos', 'year': '2015'}, function (err, result) {
         res.render("game_world_15", {
             currentGame: "hos",
+            gameName: "Heroes of the Storm",
         });
     });    
 });
@@ -336,6 +363,7 @@ app.get("/hos/future", function (req, res) {
 
     res.render("future", {
         currentGame: "hos",
+        gameName: "Heroes of the Storm",
     });
 
 });
@@ -345,6 +373,7 @@ app.get("/ic", function (req, res) {
 
     res.render("game", {
         currentGame: "ic",
+        gameName: "Infinite Crisis",
     });
 
 });
@@ -354,6 +383,7 @@ app.get("/ic/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "ic",
+            gameName: "Infinite Crisis",
         });
     });
 });
@@ -363,6 +393,7 @@ app.get("/ic/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "ic",
+            gameName: "Infinite Crisis",
         });
     });    
 });
@@ -372,6 +403,7 @@ app.get("/ic/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "ic",
+            gameName: "Infinite Crisis",
         });
     });    
 });
@@ -381,6 +413,7 @@ app.get("/ic/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "ic",
+            gameName: "Infinite Crisis",
         });
     });    
 });
@@ -390,6 +423,7 @@ app.get("/ic/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "ic",
+            gameName: "Infinite Crisis",
         });
     });    
 });
@@ -398,6 +432,7 @@ app.get("/ic/future", function (req, res) {
 
     res.render("future", {
         currentGame: "ic",
+        gameName: "Infinite Crisis",
     });
 
 });
@@ -407,6 +442,7 @@ app.get("/smite", function (req, res) {
 
     res.render("game", {
         currentGame: "smite",
+        gameName: "Smite",
     });
 
 });
@@ -416,6 +452,7 @@ app.get("/smite/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "smite",
+            gameName: "Smite",
         });
     });
 });
@@ -425,6 +462,7 @@ app.get("/smite/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "smite",
+            gameName: "Smite",
         });
     });    
 });
@@ -434,6 +472,7 @@ app.get("/smite/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "smite",
+            gameName: "Smite",
         });
     });
 });
@@ -443,6 +482,7 @@ app.get("/smite/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "smite",
+            gameName: "Smite",
         });
     });    
 });
@@ -452,6 +492,7 @@ app.get("/smite/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "smite",
+            gameName: "Smite",
         });
     });    
 });
@@ -460,6 +501,7 @@ app.get("/smite/future", function (req, res) {
 
     res.render("future", {
         currentGame: "smite",
+        gameName: "Smite",
     });
 
 });
@@ -469,6 +511,7 @@ app.get("/overwatch", function (req, res) {
 
     res.render("game", {
         currentGame: "overwatch",
+        gameName: "Overwatch",
     });
 
 });
@@ -478,6 +521,7 @@ app.get("/overwatch/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "overwatch",
+            gameName: "Overwatch",
         });
     });
 });
@@ -487,6 +531,7 @@ app.get("/overwatch/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "overwatch",
+            gameName: "Overwatch",
         });
     });
 });
@@ -496,6 +541,7 @@ app.get("/overwatch/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "overwatch",
+            gameName: "Overwatch",
         });
     });
 });
@@ -505,6 +551,7 @@ app.get("/overwatch/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "overwatch",
+            gameName: "Overwatch",
         });
     });    
 });
@@ -514,6 +561,7 @@ app.get("/overwatch/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "overwatch",
+            gameName: "Overwatch",
         });
     });    
 });
@@ -522,6 +570,7 @@ app.get("/overwatch/future", function (req, res) {
 
     res.render("future", {
         currentGame: "overwatch",
+        gameName: "Overwatch",
     });
 
 });
@@ -531,6 +580,7 @@ app.get("/strife", function (req, res) {
 
     res.render("game", {
         currentGame: "strife",
+        gameName: "Strife",
     });
 
 });
@@ -540,6 +590,7 @@ app.get("/strife/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "strife",
+            gameName: "Strife",
         });
     });
 });
@@ -549,6 +600,7 @@ app.get("/strife/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "strife",
+            gameName: "Strife",
         });
     });    
 });
@@ -558,6 +610,7 @@ app.get("/strife/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "strife",
+            gameName: "Strife",
         });
     });
 });
@@ -567,6 +620,7 @@ app.get("/strife/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "strife",
+            gameName: "Strife",
         });
     });
 });
@@ -576,6 +630,7 @@ app.get("/strife/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "strife",
+            gameName: "Strife",
         });
     });
 });
@@ -584,6 +639,7 @@ app.get("/strife/future", function (req, res) {
 
     res.render("future", {
         currentGame: "strife",
+        gameName: "Strife",
     });
 
 });
@@ -593,6 +649,7 @@ app.get("/hon", function (req, res) {
 
     res.render("game", {
         currentGame: "hon",
+        gameName: "Heroes of Newerth",
     });
 
 });
@@ -602,6 +659,7 @@ app.get("/hon/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "hon",
+            gameName: "Heroes of Newerth",
         });
     });
 });
@@ -611,6 +669,7 @@ app.get("/hon/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "hon",
+            gameName: "Heroes of Newerth",
         });
     });
 });
@@ -620,6 +679,7 @@ app.get("/hon/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "hon",
+            gameName: "Heroes of Newerth",
         });
     });
 });
@@ -629,6 +689,7 @@ app.get("/hon/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "hon",
+            gameName: "Heroes of Newerth",
         });
     });    
 });
@@ -638,6 +699,7 @@ app.get("/hon/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "hon",
+            gameName: "Heroes of Newerth",
         });
     });    
 });
@@ -646,6 +708,7 @@ app.get("/hon/future", function (req, res) {
 
     res.render("future", {
         currentGame: "hon",
+        gameName: "Heroes of Newerth",
     });
 
 });
@@ -655,6 +718,7 @@ app.get("/mww", function (req, res) {
 
     res.render("game", {
         currentGame: "mww",
+        gameName: "Magicka Wizard Wars",
     });
 
 });
@@ -664,6 +728,7 @@ app.get("/mww/intro", function (req, res) {
         res.render('intro', {
             gameInfo: result,
             currentGame: "mww",
+            gameName: "Magicka Wizard Wars",
         });
     });
 });
@@ -673,6 +738,7 @@ app.get("/mww/2014", function (req, res) {
         res.render("date_14", {
             data: result,
             currentGame: "mww",
+            gameName: "Magicka Wizard Wars",
         });
     });
 });
@@ -682,6 +748,7 @@ app.get("/mww/2015", function (req, res) {
         res.render("date_15", {
             data: result,
             currentGame: "mww",
+            gameName: "Magicka Wizard Wars",
         });
     });
 });
@@ -691,6 +758,7 @@ app.get("/mww/world2014", function (req, res) {
         res.render("game_world_14", {
             worldData: result,
             currentGame: "mww",
+            gameName: "Magicka Wizard Wars",
         });
     });
 });
@@ -700,6 +768,7 @@ app.get("/mww/world2015", function (req, res) {
         res.render("game_world_15", {
             worldData: result,
             currentGame: "mww",
+            gameName: "Magicka Wizard Wars",
         });
     });
 });
@@ -708,6 +777,7 @@ app.get("/mww/future", function (req, res) {
 
     res.render("future", {
         currentGame: "mww",
+        gameName: "Magicka Wizard Wars",
     });
 
 });
