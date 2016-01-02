@@ -1,5 +1,24 @@
 var jq=jQuery.noConflict();
 jq(function () {
+    var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
+
+    var serie = [];
+
+    var totalSearches = 0;
+    for (var i = 0; i < historical_data.length; i++) {
+        totalSearches = totalSearches + historical_data[i].value;
+    };
+
+    var percentage = 100 / totalSearches;
+
+    for (var i = 0; i < historical_data.length; i++) {
+        serie.push([historical_data[i].period, historical_data[i].value, historical_data[i].value * percentage]);
+    };
+
+    var title = "Popularity over the year "+historical_data[0].year+" for "+game;
+    var serie_name = game+" over the year "+historical_data[0].year;
+    console.log(serie);
+
     jq('#container-bubble').highcharts({
 
         chart: {
@@ -9,35 +28,39 @@ jq(function () {
         },
 
         title: {
-            text: 'Highcharts bubbles with radial gradient fill'
+            text: title
         },
 
         xAxis: {
-            gridLineWidth: 1
+            title: {
+                    text: 'Period of time'
+                    },
+            gridLineWidth: 1,
+            categories: months
         },
 
         yAxis: {
+            title: {
+                    text: 'Number of searches'
+                    },
             startOnTick: false,
             endOnTick: false
         },
 
+        tooltip: {
+            useHTML: true,
+            headerFormat: '<table>',
+            pointFormat: '<tr><th colspan="2"><h3> {point.country}</h3></th></tr>' +
+                '<tr><th>Period:</th><td> {point.x}</td></tr>' +
+                '<tr><th>Volume of Search:</th><td> {point.y}</td></tr>' +
+                '<tr><th>Percentage:</th><td> {point.z}%</td></tr>',
+            footerFormat: '</table>',
+            followPointer: true
+        },
+
         series: [{
-            data: [
-                [9, 81, 63],
-                [98, 5, 89],
-                [51, 50, 73],
-                [41, 22, 14],
-                [58, 24, 20],
-                [78, 37, 34],
-                [55, 56, 53],
-                [18, 45, 70],
-                [42, 44, 28],
-                [3, 52, 59],
-                [31, 18, 97],
-                [79, 91, 63],
-                [93, 23, 23],
-                [44, 83, 22]
-            ],
+            name: serie_name,
+            data: serie,
             marker: {
                 fillColor: {
                     radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
