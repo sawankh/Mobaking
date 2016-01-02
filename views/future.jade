@@ -37,6 +37,14 @@ html(lang='en')
     link(href='http://fonts.googleapis.com/css?family=Oswald:700,400,300', rel='stylesheet', type='text/css')
     // custom styles
     link(rel='stylesheet', type='text/css', href='../css/custom.css', media='screen')
+    script(type='text/javascript').
+      //var worlData = [];
+      var historical_data = !{JSON.stringify(data)};
+      var game = "#{gameName}";
+    script(src='../js/highcharts.js', charset='utf-8')
+    script(src='../js/highcharts-3d.js', charset='utf-8')
+    script(src='../js/highcharts-more.js' charset='utf-8')
+    script(src='../js/exporting.js', charset='utf-8')    
   body.home
     #wrap-wide
     // [/wrap-wide]
@@ -141,7 +149,9 @@ html(lang='en')
           #entries-box
             .post-item
               .entry
-
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                #container-scatter
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum                
                 .fix
               // [/entry]
             // [/post-item]
