@@ -1,8 +1,14 @@
 var jqu=jQuery.noConflict();
 jqu(function () {
 
-    var dataCategories = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
+    var dataCategories = [];
+    var serie = [];
     var title = "Top 10 countries for "+game;
+    
+    for (var i = 0; i < bar_data.length; i++) {
+        dataCategories.push(bar_data[i]._id);
+        serie.push(bar_data[i].recommendCount);
+    };
 
     jqu('#container-bar').highcharts({
         chart: {
@@ -36,8 +42,8 @@ jqu(function () {
             }
         },
         series: [{
-            name: 'Tokyo',
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0]
+            name: 'countries',
+            data: serie
 
         }]
     });
