@@ -2,10 +2,10 @@
 Module Dependencies 
 */
 var express = require('express'),
-    http = require('http'),
-    path = require('path'),
-    mongoose = require('mongoose'),
-    hash = require('./pass').hash;
+http = require('http'),
+path = require('path'),
+mongoose = require('mongoose'),
+hash = require('./pass').hash;
 
 var app = express();
 
@@ -57,7 +57,7 @@ app.configure(function () {
 
 app.use(function (req, res, next) {
     var err = req.session.error,
-        msg = req.session.success;
+    msg = req.session.success;
     delete req.session.error;
     delete req.session.success;
     res.locals.message = '';
@@ -135,21 +135,27 @@ app.get("/lol/2015", function (req, res) {
 });
 
 app.get("/lol/world2014", function (req, res) {
-    World.find({'game': 'lol', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "lol",
-            gameName: "League of Legends",
-        }); 
+    World.aggregate([{"$match": {year: "2014", game: "lol"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'lol', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "lol",
+                gameName: "League of Legends",
+            }); 
+        });
     });    
 });
 
 app.get("/lol/world2015", function (req, res) {
-    World.find({'game': 'lol', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "lol",
-            gameName: "League of Legends",
+    World.aggregate([{"$match": {year: "2015", game: "lol"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'lol', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "lol",
+                gameName: "League of Legends",
+            });
         }); 
     });    
 });
@@ -205,21 +211,27 @@ app.get("/dota2/2015", function (req, res) {
 });
 
 app.get("/dota2/world2014", function (req, res) {
-    World.find({'game': 'dota2', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "dota2",
-            gameName: "Dota 2",
+    World.aggregate([{"$match": {year: "2014", game: "dota2"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'dota2', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "dota2",
+                gameName: "Dota 2",
+            });
         });
     });    
 });
 
 app.get("/dota2/world2015", function (req, res) {
-    World.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "dota2",
-            gameName: "Dota 2",
+    World.aggregate([{"$match": {year: "2015", game: "dota2"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "dota2",
+                gameName: "Dota 2",
+            });
         });
     });    
 });
@@ -274,21 +286,27 @@ app.get("/airmech/2015", function (req, res) {
 });
 
 app.get("/airmech/world2014", function (req, res) {
-    World.find({'game': 'airmech', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "airmech",
-            gameName: "Airmech",
+    World.aggregate([{"$match": {year: "2014", game: "airmech"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'airmech', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "airmech",
+                gameName: "Airmech",
+            });
         });
     });    
 });
 
 app.get("/airmech/world2015", function (req, res) {
-    World.find({'game': 'airmech', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "airmech",
-            gameName: "Airmech",
+    World.aggregate([{"$match": {year: "2015", game: "airmech"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'airmech', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "airmech",
+                gameName: "Airmech",
+            });
         });
     });    
 });
@@ -342,19 +360,25 @@ app.get("/hos/2015", function (req, res) {
 });
 
 app.get("/hos/world2014", function (req, res) {
-    World.find({'game': 'hos', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            currentGame: "hos",
-            gameName: "Heroes of the Storm",
+    World.aggregate([{"$match": {year: "2014", game: "hos"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'hos', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                currentGame: "hos",
+                gameName: "Heroes of the Storm",
+            });
         });
     });    
 });
 
 app.get("/hos/world2015", function (req, res) {
-    World.find({'game': 'hos', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            currentGame: "hos",
-            gameName: "Heroes of the Storm",
+    World.aggregate([{"$match": {year: "2015", game: "hos"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'hos', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                currentGame: "hos",
+                gameName: "Heroes of the Storm",
+            });
         });
     });    
 });
@@ -409,21 +433,27 @@ app.get("/ic/2015", function (req, res) {
 });
 
 app.get("/ic/world2014", function (req, res) {
-    World.find({'game': 'ic', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "ic",
-            gameName: "Infinite Crisis",
+    World.aggregate([{"$match": {year: "2014", game: "ic"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'ic', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "ic",
+                gameName: "Infinite Crisis",
+            });
         });
     });    
 });
 
 app.get("/ic/world2015", function (req, res) {
-    World.find({'game': 'ic', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "ic",
-            gameName: "Infinite Crisis",
+    World.aggregate([{"$match": {year: "2015", game: "ic"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'ic', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "ic",
+                gameName: "Infinite Crisis",
+            });
         });
     });    
 });
@@ -478,21 +508,27 @@ app.get("/smite/2015", function (req, res) {
 });
 
 app.get("/smite/world2014", function (req, res) {
-    World.find({'game': 'smite', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "smite",
-            gameName: "Smite",
+    World.aggregate([{"$match": {year: "2014", game: "smite"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'smite', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "smite",
+                gameName: "Smite",
+            });
         });
     });    
 });
 
 app.get("/smite/world2015", function (req, res) {
-    World.find({'game': 'smite', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "smite",
-            gameName: "Smite",
+    World.aggregate([{"$match": {year: "2015", game: "smite"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'smite', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "smite",
+                gameName: "Smite",
+            });
         });
     });    
 });
@@ -547,21 +583,27 @@ app.get("/overwatch/2015", function (req, res) {
 });
 
 app.get("/overwatch/world2014", function (req, res) {
-    World.find({'game': 'overwatch', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "overwatch",
-            gameName: "Overwatch",
+    World.aggregate([{"$match": {year: "2014", game: "overwatch"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'overwatch', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "overwatch",
+                gameName: "Overwatch",
+            });
         });
     });    
 });
 
 app.get("/overwatch/world2015", function (req, res) {
-    World.find({'game': 'overwatch', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "overwatch",
-            gameName: "Overwatch",
+    World.aggregate([{"$match": {year: "2015", game: "overwatch"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'overwatch', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "overwatch",
+                gameName: "Overwatch",
+            });
         });
     });    
 });
@@ -616,21 +658,27 @@ app.get("/strife/2015", function (req, res) {
 });
 
 app.get("/strife/world2014", function (req, res) {
-    World.find({'game': 'strife', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "strife",
-            gameName: "Strife",
+    World.aggregate([{"$match": {year: "2014", game: "strife"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'strife', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "strife",
+                gameName: "Strife",
+            });
         });
     });
 });
 
 app.get("/strife/world2015", function (req, res) {
-    World.find({'game': 'strife', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "strife",
-            gameName: "Strife",
+    World.aggregate([{"$match": {year: "2015", game: "strife"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'strife', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "strife",
+                gameName: "Strife",
+            });
         });
     });
 });
@@ -685,21 +733,27 @@ app.get("/hon/2015", function (req, res) {
 });
 
 app.get("/hon/world2014", function (req, res) {
-    World.find({'game': 'hon', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "hon",
-            gameName: "Heroes of Newerth",
+    World.aggregate([{"$match": {year: "2014", game: "hon"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'hon', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "hon",
+                gameName: "Heroes of Newerth",
+            });
         });
     });    
 });
 
 app.get("/hon/world2015", function (req, res) {
-    World.find({'game': 'hon', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "hon",
-            gameName: "Heroes of Newerth",
+    World.aggregate([{"$match": {year: "2015", game: "hon"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'hon', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "hon",
+                gameName: "Heroes of Newerth",
+            });
         });
     });    
 });
@@ -754,21 +808,27 @@ app.get("/mww/2015", function (req, res) {
 });
 
 app.get("/mww/world2014", function (req, res) {
-    World.find({'game': 'mww', 'year': '2014'}, function (err, result) {
-        res.render("game_world_14", {
-            worldData: result,
-            currentGame: "mww",
-            gameName: "Magicka Wizard Wars",
+    World.aggregate([{"$match": {year: "2014", game: "mww"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'mww', 'year': '2014'}, function (err, result) {
+            res.render("game_world_14", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "mww",
+                gameName: "Magicka Wizard Wars",
+            });
         });
     });
 });
 
 app.get("/mww/world2015", function (req, res) {
-    World.find({'game': 'mww', 'year': '2015'}, function (err, result) {
-        res.render("game_world_15", {
-            worldData: result,
-            currentGame: "mww",
-            gameName: "Magicka Wizard Wars",
+    World.aggregate([{"$match": {year: "2015", game: "mww"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
+        World.find({'game': 'mww', 'year': '2015'}, function (err, result) {
+            res.render("game_world_15", {
+                worldTop: top,
+                worldData: result,
+                currentGame: "mww",
+                gameName: "Magicka Wizard Wars",
+            });
         });
     });
 });

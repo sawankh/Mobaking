@@ -45,6 +45,9 @@ html(lang='en')
     script(type='text/javascript').
       //var worlData = [];
       var world_data = !{JSON.stringify(worldData)};
+      var bar_data = !{JSON.stringify(worldTop)};
+      var game = "#{gameName}";
+      console.log(bar_data);
     script(src='../js/worldMap.js', charset='utf-8')
     script(src='../js/highcharts.js', charset='utf-8')
     script(src='../js/highcharts-3d.js', charset='utf-8')
