@@ -31,7 +31,8 @@ jqe(function () {
     var europeValues = 0; 
     var northAmericaValues = 0; 
     var southAmericaValues = 0;
-    console.log(europeValues);
+    
+    /* Load data */
     for (var i = 0; i < world_data.length; i++) {
         if (africa.indexOf(world_data[i].countryName) > -1) {
             africaValues++;
@@ -50,9 +51,10 @@ jqe(function () {
         };
     };
 
-    console.log(world_data.length);
+    /* Calculate percentage */
     var percen = 100 / world_data.length;
 
+    /* Push into array */
     datos.push(['Africa', percen * africaValues]);
     datos.push(['Antarctica', percen * antarcticaValues]);
     datos.push(['Asia', percen * asiaValues]);
@@ -60,8 +62,8 @@ jqe(function () {
     datos.push(['North America', percen * northAmericaValues]);
     datos.push(['South America', percen * southAmericaValues]);
     datos.push(['Oceania', percen * oceaniaValues]);
-    console.log(world_data);
-
+    
+    /* Create pie chart */
     jqe('#container').highcharts({
         chart: {
             type: 'pie',

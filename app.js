@@ -214,7 +214,7 @@ app.get("/dota2/world2014", function (req, res) {
     });    
 });
 
-app.get("/dota2/world", function (req, res) {
+app.get("/dota2/world2015", function (req, res) {
     World.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
         res.render("game_world_15", {
             worldData: result,
