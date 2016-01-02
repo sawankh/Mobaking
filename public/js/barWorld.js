@@ -1,5 +1,6 @@
-$(function () {
-    $('#container-bar').highcharts({
+var jqu=jQuery.noConflict();
+jqu(function () {
+    jqu('#container-bar').highcharts({
         chart: {
             type: 'column'
         },
