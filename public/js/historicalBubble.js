@@ -53,7 +53,7 @@ jq(function () {
             pointFormat: '<tr><th colspan="2"><h3> {point.country}</h3></th></tr>' +
                 '<tr><th>Period:</th><td> {point.x}</td></tr>' +
                 '<tr><th>Volume of Search:</th><td> {point.y}</td></tr>' +
-                '<tr><th>Percentage:</th><td> {point.z}%</td></tr>',
+                '<tr><th>Percentage:</th><td> {point.z:,0.2f}%</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
