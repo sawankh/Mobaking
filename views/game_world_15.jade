@@ -46,6 +46,10 @@ html(lang='en')
       //var worlData = [];
       var world_data = !{JSON.stringify(worldData)};
     script(src='../js/worldMap.js', charset='utf-8')
+    script(src='../js/highcharts.js', charset='utf-8')
+    script(src='../js/highcharts-3d.js', charset='utf-8')
+    script(src='../js/exporting.js', charset='utf-8')
+    script(src='../js/pieChart.js', charset='utf-8')
     style(type='text/css').
       .mapael .mapTooltip {
       position: absolute;
@@ -76,7 +80,6 @@ html(lang='en')
       border-radius: 3px;
       cursor: pointer;
       position: absolute;
-      top: 0;
       font-weight: bold;
       left: 10px;
       -webkit-user-select: none;
@@ -87,18 +90,18 @@ html(lang='en')
       }
       /* Reset Zoom button first */
       .mapael .zoomReset {
-      top: 44%;
-      left: 5%;
+      z-index: 900;
+      position: relative;
       }
       /* Then Zoom In button */
       .mapael .zoomIn {
-      top: 48%;
-      left: 5%;
+      z-index: 900;
+      position: relative;
       }
       /* Then Zoom Out button */
       .mapael .zoomOut {
-      top: 52%;
-      left: 5%;
+      z-index: 900;
+      position: relative;
       }    
   body.home
     #wrap-wide
@@ -206,7 +209,6 @@ html(lang='en')
               .entry
                 .world
                   .map
-                  div(style='clear: both;')
                   .one_half
                     h2 Select a year
                     .knobContainer
@@ -214,6 +216,7 @@ html(lang='en')
                   .one_half.last
                     .areaLegend
                     .plotLegend
+                #container
                 .fix
               // [/entry]
             // [/post-item]
