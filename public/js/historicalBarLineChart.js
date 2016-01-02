@@ -1,5 +1,6 @@
 var jqu=jQuery.noConflict();
 jqu(function () {
+    
     jqu('#container-area').highcharts({
         title: {
             text: 'Combination chart'
