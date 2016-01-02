@@ -2,6 +2,9 @@ var jq=jQuery.noConflict();
 jq(function () {
     var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
 
+    var colors = ["#D4D4D", "#5DA5DA", "#FAA43A", "#60BD68", "#F17CB0", "#B2912F", "#B276B2","#DECF3F", "#F15854"];
+    var randomColor = parseInt((Math.random() * ((colors.length - 1) - 0 + 1)), 10) + 0;
+
     var serie = [];
 
     var totalSearches = 0;
@@ -66,7 +69,7 @@ jq(function () {
                     radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
                     stops: [
                         [0, 'rgba(255,255,255,0.5)'],
-                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0.5).get('rgba')]
+                        [1, Highcharts.Color(colors[randomColor]).setOpacity(0.5).get('rgba')]
                     ]
                 }
             }
