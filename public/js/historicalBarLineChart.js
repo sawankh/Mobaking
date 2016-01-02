@@ -1,21 +1,31 @@
 var jqu=jQuery.noConflict();
 jqu(function () {
-    
+    var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
+
+    var serie = [];
+
+    for (var i = 0; i < historical_data.length; i++) {
+        serie.push(historical_data[i].value);
+    };
+
+    var title = "Popularity over the year "+historical_data[0].year+" for "+game;
+    var serie_name = game+" over the year "+historical_data[0].year;
+
     jqu('#container-area').highcharts({
         title: {
-            text: 'Combination chart'
+            text: title
         },
         xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+            categories: months
         },
         series: [{
             type: 'column',
-            name: 'Jane',
-            data: [3, 2, 1, 3, 4]
+            name: serie_name,
+            data: serie
         }, {
             type: 'spline',
             name: 'Average',
-            data: [3, 2.67, 3, 6.33, 3.33],
+            data: serie,
             marker: {
                 lineWidth: 2,
                 lineColor: Highcharts.getOptions().colors[3],
