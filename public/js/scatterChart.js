@@ -22,10 +22,8 @@ jq(function () {
             axisX_labels.push(label);
         }
 
-        console.log(axisX_labels);
-
+        
         for (var i = 0; i < historical_data.length; i++) {
-            console.log(historical_data[i].year);
             serie.push(historical_data[i].value);
         };
 
