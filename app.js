@@ -379,6 +379,7 @@ app.get("/hos/world2014", function (req, res) {
         World.find({'game': 'hos', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
                 worldTop: top,
+                worldData: result,
                 currentGame: "hos",
                 gameName: "Heroes of the Storm",
             });
@@ -391,6 +392,7 @@ app.get("/hos/world2015", function (req, res) {
         World.find({'game': 'hos', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
                 worldTop: top,
+                worldData: result,
                 currentGame: "hos",
                 gameName: "Heroes of the Storm",
             });
