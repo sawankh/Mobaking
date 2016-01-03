@@ -77,15 +77,35 @@ Helper Functions
 Routes
 */
 app.get("/", function (req, res) {
-
     res.render("index");
-
 });
 
 app.get("/world", function (req, res) {
-
     res.render("world");
+});
 
+app.get("/world/ranking", function (req, res) {
+Data.find({}, function (err, result) {
+        res.render("world_ranking", {
+            data: result
+        });
+    });    
+});
+
+app.get("/world/stats", function (req, res) {
+Data.find({}, function (err, result) {
+        res.render("world_stats", {
+            data: result
+        });
+    });
+});
+
+app.get("/world/compare", function (req, res) {
+Data.find({}, function (err, result) {
+        res.render("world_compare", {
+            data: result
+        });
+    });
 });
 
 app.get("/about", function (req, res) {
