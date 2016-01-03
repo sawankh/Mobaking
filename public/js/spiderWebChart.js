@@ -132,35 +132,45 @@ jqu(function () {
 
         series:[{
             name: 'League of Legends',
-            data: serieLol
+            data: serieLol,
+            pointPlacement: 'on'
         }, 
         {
             name: 'Dota 2',
-            data: serieDota2
+            data: serieDota2,
+            pointPlacement: 'on'
         }, {
             name: 'Airmech',
-            data: serieAirmech
+            data: serieAirmech,
+            pointPlacement: 'on'
         }, {
             name: 'Heroes of the Storm',
-            data: serieHos
+            data: serieHos,
+            pointPlacement: 'on'
         }, {
             name: 'Heroes of Newreth',
-            data: serieHon
+            data: serieHon,
+            pointPlacement: 'on'
         }, {
             name: 'Infinite Crisis',
-            data: serieIc
+            data: serieIc,
+            pointPlacement: 'on'
         }, {
             name: 'Smite',
-            data: serieSmite
+            data: serieSmite,
+            pointPlacement: 'on'
         }, {
             name: 'Strife',
-            data: serieStrife
+            data: serieStrife,
+            pointPlacement: 'on'
         }, {
             name: 'Overwatch',
-            data: serieOverwatch
+            data: serieOverwatch,
+            pointPlacement: 'on'
         }, {
             name: 'Magicka Wizard Wars',
-            data: serieMww
+            data: serieMww,
+            pointPlacement: 'on'
         }]
     });
 });
