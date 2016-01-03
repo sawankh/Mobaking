@@ -25,8 +25,11 @@ jq(function () {
         console.log(axisX_labels);
 
         for (var i = 0; i < historical_data.length; i++) {
+            console.log(historical_data[i].year);
             serie.push(historical_data[i].value);
         };
+
+        serie.reverse();
 
         var title = "Scatter Plot with regression line for "+game;
 
