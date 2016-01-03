@@ -2,14 +2,17 @@ var jq=jQuery.noConflict();
 jq(function () {
         var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
 
+        /* Generate random colors */
         var colors = ["#D4D4D", "#5DA5DA", "#FAA43A", "#60BD68", "#F17CB0", "#B2912F", "#B276B2","#DECF3F", "#F15854"];
         var randomColorLine = parseInt((Math.random() * ((colors.length - 1) - 0 + 1)), 10) + 0;
         var randomColorDots = parseInt((Math.random() * ((colors.length - 1) - 0 + 1)), 10) + 0;
 
+        /* Varibles of regression line and labels for X axis */
         var serie = [];
         var regressionValues = [];
         var axisX_labels = [];
 
+        /* Calculating labels */
         year = 2014;
         for (var i = 0; i < (3 * months.length); i++) {
             if ((i % months.length) == 0 && i != 0) {
@@ -27,6 +30,8 @@ jq(function () {
 
         var title = "Scatter Plot with regression line for "+game;
 
+
+        /* Calculating regression line points */
         var x_values = [];
         for (var i = 0; i < 12; i++) {
             x_values.push(i);
@@ -88,6 +93,7 @@ jq(function () {
             regressionValues.push([x,y]);
         }
 
+        /* Time to predict one more year (2016) */
         for (var i = 12; i < 12 * 2; i++) {
             x = i;
             y = x * m + b;
