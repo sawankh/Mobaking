@@ -4,13 +4,15 @@ html(lang='en')
     meta(charset='UTF-8')
     title Mobaking: There's only one King
     link(rel='stylesheet', href='../css/flexslider.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='../css/image-picker.css', type='text/css', media='screen')
     link(rel='stylesheet', type='text/css', href='../css/style.css', media='screen')
     link(rel='stylesheet', href='../css/prettyPhoto.css', type='text/css', media='screen')
     link(rel='stylesheet', href='../css/supersized.css', type='text/css', media='screen')
+    
     //
       if lt IE 9link(rel='stylesheet', href='css/ie.css', type='text/css', media='screen')
     // MOBILE SETTINGS
-    link(rel='stylesheet', href='../css/responsive.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='../css/responsive.css', type='text/css', media='screen')    
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     //
       if lt IE 9script(src='js/css3-mediaqueries.js')
@@ -120,6 +122,17 @@ html(lang='en')
           #entries-box
             .post-item
               .entry
+                select#testeo.image-picker.show-html(data-limit='2', multiple='multiple')
+                  option(data-img-src='../images/title/lol.png', value='1') lol
+                  option(data-img-src='../images/title/dota2.png', value='2') dota2
+                  option(data-img-src='../images/title/ic.png', value='3') ic
+                  option(data-img-src='../images/title/smite.png', value='4') smite
+                  option(data-img-src='../images/title/hos.png', value='5') hos
+                  option(data-img-src='../images/title/hon.png', value='6') hon
+                  option(data-img-src='../images/title/strife.png', value='7') strife
+                  option(data-img-src='../images/title/airmech.png', value='8') airmech
+                  option(data-img-src='../images/title/overwatch.png', value='9') overwatch
+                  option(data-img-src='../images/title/mww.png', value='10') mww
                 p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
                 #container-area
                 p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
@@ -151,3 +164,5 @@ html(lang='en')
       a#tray-button
         img#tray-arrow(data-retina='true', src='../images/slider/button-tray-up.png')
       a#shutdown(href='#') ShutDown
+    script(type='text/javascript', src='../js/image-picker.js')
+    script(type='text/javascript', src='../js/pick.js')          

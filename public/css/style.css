@@ -2228,7 +2228,7 @@ only screen and (min-resolution: 144dpi) {
 }
 /* basic list */
 .entry ul li {
-    list-style-type: disc;
+    list-style-type: none;
     padding: 3px 0 3px 0;
     list-style-position: inside;
 }
