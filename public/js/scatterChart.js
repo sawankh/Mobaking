@@ -107,7 +107,9 @@ jq(function () {
                 categories: axisX_labels
             },
             yAxis: {
-                
+                title: {
+                        text: 'Number of searches'
+                        }
             },
             title: {
                 text: title
