@@ -4,7 +4,3 @@ jaq(function () {
 		hide_select:  true,
 	});
 });
-
-jaq("#compare").click(function () {
-	alert("Hello!");
-});
