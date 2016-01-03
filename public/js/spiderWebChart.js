@@ -98,7 +98,7 @@ jqu(function () {
         },
 
         title: {
-            text: 'Budget vs spending',
+            text: 'Trends of Games',
             x: -80
         },
 
