@@ -2,6 +2,8 @@ var jqu=jQuery.noConflict();
 jqu(function () {
     var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
 
+    var m = ["January-February 2014", "March-April 2014", "May-June 2014", "July-August 2014", "September-October 2014", "November-December 2014", "January-February 2015", "March-April 2015", "May-June 2015", "July-August 2015", "September-October 2015", "November-December 2015"];
+
     var axisX_labels = [];
 
     /* Calculating labels */
