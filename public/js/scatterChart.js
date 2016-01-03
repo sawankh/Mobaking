@@ -107,7 +107,7 @@ jq(function () {
                 categories: axisX_labels
             },
             yAxis: {
-                min: 0
+                
             },
             title: {
                 text: title
