@@ -1,34 +1,52 @@
 var jq=jQuery.noConflict();
 jq(function () {
-    var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
+        var months = ["Jan/Feb", "Mar/Apr", "May/Jun", "Jul/Aug", "Sep/Oct", "Nov/Dec"];
 
-    var colors = ["#D4D4D", "#5DA5DA", "#FAA43A", "#60BD68", "#F17CB0", "#B2912F", "#B276B2","#DECF3F", "#F15854"];
-    var randomColor = parseInt((Math.random() * ((colors.length - 1) - 0 + 1)), 10) + 0;
+        var colors = ["#D4D4D", "#5DA5DA", "#FAA43A", "#60BD68", "#F17CB0", "#B2912F", "#B276B2","#DECF3F", "#F15854"];
+        var randomColorLine = parseInt((Math.random() * ((colors.length - 1) - 0 + 1)), 10) + 0;
+        var randomColorDots = parseInt((Math.random() * ((colors.length - 1) - 0 + 1)), 10) + 0;
 
-    var serie = [];
+        var serie = [];
+        var regressionValues = [];
+        var axisX_labels = [];
 
-    for (var i = 0; i < historical_data.length; i++) {
-        serie.push(historical_data[i].value);
-    };
+        year = 2014;
+        for (var i = 0; i < (3 * months.length); i++) {
+            if ((i % months.length) == 0 && i != 0) {
+                year++;
+            };
+            var label = months[i % months.length]+" "+year.toString();
+            axisX_labels.push(label);
+        }
 
-    var title = "Scatter Plot with regression line for "+game;
+        console.log(axisX_labels);
 
-    var regressionLine = function findLineByLeastSquares(values_x, values_y) {
-            var sum_x = 0;
-            var sum_y = 0;
-            var sum_xy = 0;
-            var sum_xx = 0;
-            var count = 0;
+        for (var i = 0; i < historical_data.length; i++) {
+            serie.push(historical_data[i].value);
+        };
+
+        var title = "Scatter Plot with regression line for "+game;
+
+        var x_values = [];
+        for (var i = 0; i < 12; i++) {
+            x_values.push(i);
+        };
+
+        var sum_x = 0;
+        var sum_y = 0;
+        var sum_xy = 0;
+        var sum_xx = 0;
+        var count = 0;
 
         /*
          * We'll use those variables for faster read/write access.
          */
          var x = 0;
          var y = 0;
-         var values_length = values_x.length;
+         var values_length = x_values.length;
 
-         if (values_length != values_y.length) {
-            throw new Error('The parameters values_x and values_y need to have same size!');
+         if (values_length != serie.length) {
+            throw new Error('The parameters x_values and serie need to have same size!');
         }
 
         /*
@@ -41,9 +59,9 @@ jq(function () {
         /*
          * Calculate the sum for each of the parts necessary.
          */
-         for (var v = 0; v &lt; values_length; v++) {
-            x = values_x[v];
-            y = values_y[v];
+         for (var v = 0; v < values_length; v++) {
+            x = x_values[v];
+            y = serie[v];
             sum_x += x;
             sum_y += y;
             sum_xx += x*x;
@@ -61,50 +79,55 @@ jq(function () {
         /*
          * We will make the x and y result line now
          */
-         var result_values_x = [];
-         var result_values_y = [];
+         var result_x_values = [];
+         var result_serie = [];
 
-         for (var v = 0; v &lt; values_length; v++) {
-            x = values_x[v];
+         for (var v = 0; v < values_length; v++) {
+            x = x_values[v];
             y = x * m + b;
-            result_values_x.push(x);
-            result_values_y.push(y);
+            regressionValues.push([x,y]);
         }
 
-        return [result_values_x, result_values_y];
-    };
-    
-    jq('#container-scatter').highcharts({
-        xAxis: {
-            min: -0.5,
-            max: 5.5
-        },
-        yAxis: {
-            min: 0
-        },
-        title: {
-            text: title
-        },
-        series: [{
-            type: 'line',
-            name: 'Regression Line',
-            data: [[0, 1.11], [5, 4.51]],
-            marker: {
-                enabled: false
+        for (var i = 12; i < 12 * 2; i++) {
+            x = i;
+            y = x * m + b;
+            regressionValues.push([x,y]);   
+        };
+
+        jq('#container-scatter').highcharts({
+            xAxis: {
+                min: 0,
+                max: 17,
+                categories: axisX_labels
             },
-            states: {
-                hover: {
-                    lineWidth: 0
+            yAxis: {
+                min: 0
+            },
+            title: {
+                text: title
+            },
+            series: [{
+                type: 'line',
+                name: 'Regression Line',
+                data: regressionValues,
+                color: colors[randomColorLine],
+                marker: {
+                    enabled: false
+                },
+                states: {
+                    hover: {
+                        lineWidth: 0
+                    }
+                },
+                enableMouseTracking: true
+            }, {
+                type: 'scatter',
+                name: 'Volume of Search',
+                data: serie,
+                color: colors[randomColorDots],
+                marker: {
+                    radius: 4
                 }
-            },
-            enableMouseTracking: false
-        }, {
-            type: 'scatter',
-            name: 'Observations',
-            data: serie,
-            marker: {
-                radius: 4
-            }
-        }]
+            }]
+        });
     });
-});
