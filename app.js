@@ -160,6 +160,8 @@ app.get("/lol/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "lol"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'lol', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of League of Legends over the different continents. Game players in Europe were more interested in this game than in other continents, which followed by players in Asia and South America. By contrast, the last two continents were Africa and Antarctica.",
+                barDesc: "The bar chart shows the top 10 countries for League of Legends with regard to the number of searches. In this year, Peru was the top one country, because only the number of searches in Peru was more than 5000, which was followed by Canada and Thailand.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "lol",
@@ -173,6 +175,8 @@ app.get("/lol/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "lol"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'lol', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart shows the popularity of League of Legends over the different continents. Game players in Europe were more interested in this game than in other continents, which followed by players in Asia and South America. By contrast, the last two continents were Africa and Antarctica.",
+                barDesc: "The bar chart shows the top 10 countries for League of Legends with regard to the number of searches. In this year, Peru was the top one country, because only the number of searches in Peru was more than 4500, which was followed by Argentina and Belgium.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "lol",
@@ -185,6 +189,7 @@ app.get("/lol/world2015", function (req, res) {
 app.get("/lol/future", function (req, res) {
     Data.find({'game': 'lol'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The scatter plot indicates the future trend of League of Legends by analysing the past data. It can be concluded from the regression line that League of Legends will still be very popular but it will decrease at very slow speed.",
             data: result,
             currentGame: "lol",
             gameName: "League of Legends",
