@@ -226,7 +226,6 @@ jqu("#compare").click(function () {
             point = chart.series[0].searchPoint(e, true); // Get the hovered point
 
             if (point) {
-            	console.log(point);
             	point.onMouseOver(); // Show the hover marker
                 chart.tooltip.refresh(point); // Show the tooltip
                 chart.xAxis[0].drawCrosshair(e, point); // Show the crosshair
