@@ -677,6 +677,8 @@ app.get("/strife/intro", function (req, res) {
 app.get("/strife/2014", function (req, res) {
     Data.find({'game': 'strife', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "As the chart shows, from January 2014 to June 2014, the popularity of the Strife has a slight fluctuation. Since July 2014, the popularity of Strife keeps decreasing.",
+            bubbleDesc: "The minimum number of searches in 2014 between on January and February, which is less than 3400. However, the main portion of this year is on March, April, July and August, which are over 3800.",
             data: result,
             currentGame: "strife",
             gameName: "Strife",
@@ -687,6 +689,8 @@ app.get("/strife/2014", function (req, res) {
 app.get("/strife/2015", function (req, res) {
     Data.find({'game': 'strife', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "As the chart shows, in 2015, the popularity of the Strife keeps stability. On May, June, September and October, there is some decreament. But at the end of the year, the number of searches reached its maximum value, over 2.5k searches.",
+            bubbleDesc: "As the chart shows, the average number of searches is between 2600 and 2700 in 2015. The minimum appeared in the middle of the year, which is less than 2500. At the end of 2015, the searches of Strife reached its maximum value.",
             data: result,
             currentGame: "strife",
             gameName: "Strife",
@@ -698,6 +702,8 @@ app.get("/strife/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "strife"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'strife', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of Strife in different continent. The Europe account for the biggest portion in this chart, which is over a half. It seems to be that the Strife’s almost as popular in Asia as in South America.",
+                barDesc: "This bar chart illustrates that the volume of search for the Strife in the top 10 countries. Australia is the first, which is over 750. Nevertheless, the tenth is Hungary, just achieve 500.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "strife",
@@ -711,6 +717,8 @@ app.get("/strife/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "strife"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'strife', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart shows the popularity of Strife in different continent. The Europe account for the biggest portion in this chart, which is over a half. It seems to be that the Strife’s almost as popular in Asia as in South America.",
+                barDesc: "This bar chart illustrates that the volume of search for the Strife in the top 10 countries. Germany is the first, which is over 750. Furthermore, there are 5 countries, whose values are less than 500.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "strife",
@@ -723,6 +731,7 @@ app.get("/strife/world2015", function (req, res) {
 app.get("/strife/future", function (req, res) {
     Data.find({'game': 'strife'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "According to this plot, the number of searches for Strife are keep dwindling since January 2014 to December 2015. So the popularity of Strife maybe decrease in 2016.",
             data: result,
             currentGame: "strife",
             gameName: "Strife",
@@ -751,6 +760,8 @@ app.get("/hon/intro", function (req, res) {
 app.get("/hon/2014", function (req, res) {
     Data.find({'game': 'hon', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "As the chart shows, from January to June 2014, the popularity of the Heroes of Newerth maintained. The peak value of the popularity appeared on January and February 2014.",
+            bubbleDesc: "The popularity for Heroes of Newerth in 2014 has a fluctuation. The minimum number of searches for Heroes of Newerth in 2014 where registered during the period of March and April, which is less than 8300. However, the biggest portion of this year is on January and February, which is over 8800.",
             data: result,
             currentGame: "hon",
             gameName: "Heroes of Newerth",
@@ -761,6 +772,8 @@ app.get("/hon/2014", function (req, res) {
 app.get("/hon/2015", function (req, res) {
     Data.find({'game': 'hon', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "As the chart shows, in 2015, the popularity of the Heroes of Newerth was maintained, being the average value around 7k. From September to October, there is an increament, and also was registered the maximum value.",
+            bubbleDesc: "This chart demonstrates that there is a fluctuation in popularity of Heroes of Neweerth during January to August in 2015. On September and October, there is a sharply increament in the number of searches, and it achieves the peak value which is over 7400. At the end of 2015, the number of searches reduce to, registiring less than 7000.",
             data: result,
             currentGame: "hon",
             gameName: "Heroes of Newerth",
@@ -772,6 +785,8 @@ app.get("/hon/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "hon"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'hon', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of Heroes of Newerth on different continent. The Europe account for the biggest portion in this chart, which is near a half. It seems to be that the Heroes of Newerth is almost as popular in Asia as in South America.",
+                barDesc: "This diagram illustrates that the volume of search for the Strife in the top 10 countries. Canada is the first, which is near 2000. Furthermore, there are top 4 countries’ values are over than 1500.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "hon",
@@ -785,6 +800,8 @@ app.get("/hon/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "hon"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'hon', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart shows the popularity of Heroes of Newerth on different continent. The Europe account for the biggest portion in this chart, which is near a half. It seems to be that the Heroes of Newerth is almost as popular in Asia as in South America.",
+                barDesc: "This bar chart illustrates that the volume of search for Heroes of Newrth in the top 10 countries. Argentina is the first, which is over 2k. Nevertheless, the tenth is Ecuador, just over 1k.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "hon",
@@ -797,6 +814,7 @@ app.get("/hon/world2015", function (req, res) {
 app.get("/hon/future", function (req, res) {
     Data.find({'game': 'hon'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "",
             data: result,
             currentGame: "hon",
             gameName: "Heroes of Newerth",
