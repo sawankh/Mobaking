@@ -6,7 +6,7 @@ jqu(function () {
 
     var dataCategories = [];
     var serie = [];
-    var title = "Top 10 countries for "+game;
+    var title = "Top 10 countries for "+game+" over the year "+world_data[0].year;
     
     for (var i = 0; i < bar_data.length; i++) {
         dataCategories.push(bar_data[i]._id);

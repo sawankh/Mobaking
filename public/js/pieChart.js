@@ -74,7 +74,7 @@ jqe(function () {
             }
         },
         title: {
-            text: 'Popularity based on continent'
+            text: 'Popularity based on continent for ' + game + " over the year " + world_data[0].year
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
