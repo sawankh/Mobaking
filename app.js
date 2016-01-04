@@ -384,6 +384,8 @@ app.get("/hos/intro", function (req, res) {
 app.get("/hos/2014", function (req, res) {
     Data.find({'game': 'hos', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "This bar chart shows the number of search of Heroes of the Storm in each two months in 2014. As can be seen from the bar chart and the distribution line, there is no obvious changes in 2014. But the number of search is still huge that all of them are up to 6000 expect Jan/Feb. That means that Heroes of the Storm is very popular in the world.",
+            bubbleDesc: "This is a bubble plot showing the popularity over the year 2014 for Heroes of the Storm. The X axis is each 2 months of one year and Y axis represents the number of searches, the bubble shows the percentage. As can been seen from the graph, the huger number of searches is, the bigger bubble is.  The smallest bubble is between Jan and Feb and the biggest bubble is in July and August. But the size of bubble is similar among Mar/Apr, May/Jun and Jul/Aug.",
             data: result,
             currentGame: "hos",
             gameName: "Heroes of the Storm",
@@ -394,6 +396,8 @@ app.get("/hos/2014", function (req, res) {
 app.get("/hos/2015", function (req, res) {
     Data.find({'game': 'hos', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "This bar chart shows the number of search of Heroes of the Storm in each two months in 2015. As can be seen from the bar chart and the distribution line, there is no obvious changes in 2015. But the number of search is still huge which fluctuate between 6000 and 8000 in each 2 months. That means that Heroes of the Storm is very popular in the world.",
+            bubbleDesc: "This is a bubble plot showing the popularity over the year 2015 for Heroes of the Storm. The X axis is each 2 months of one year and Y axis represents the number of searches, the bubble shows the percentage. As can been seen from the graph, the huger number of searches is, the bigger bubble is. The biggest bubble is in Mar/Apr, the smallest bubble is in May/Jun. As the whole, the different between the biggest and smallest bubbles is big because of small rang in number of searches.",
             data: result,
             currentGame: "hos",
             gameName: "Heroes of the Storm",
@@ -405,6 +409,8 @@ app.get("/hos/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "hos"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'hos', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "This pie chart illustrate the popularity of Heroes of the Storm based on continent.  As can been seen from the pie chart, Europe takes over most place in the pie chart and the lowest percentage is Africa and Antarctica which almost  disappear in the pie chart. The percentage of South America and Asia is similar which is up to approximately a fifth. North America and Oceania have similar percentage. ",
+                barDesc: "The histogram shows the countries which the volume of searches of Heroes of the Storm is in top 10 in the world. As can been seen form the histogram, the first country is Ecuador. The second country and third country is Uruguay and Canada which has similar volume of search. There are gradual decrease from Moldova to Spain.  ",
                 worldTop: top,
                 worldData: result,
                 currentGame: "hos",
@@ -418,6 +424,8 @@ app.get("/hos/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "hos"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'hos', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "This pie chart illustrate the popularity of Heroes of the Storm based on continent.  As can been seen from the pie chart, Europe takes over almost half  place in the pie chart and the lowest percentage is Africa and Antarctica which almost  disappear in the pie chart. The percentage of South America and Asia is similar which is up to approximately a fifth. North America and Oceania have similar percentage.",
+                barDesc: "The histogram shows the countries which the volume of searches of Heroes of the Storm is in top 10 in the world. As can been seen form the histogram, the first country is Kosovo. The second country and third country is United States and Canada which has similar volume of search. There are gradual decrease from France to Thailand.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "hos",
@@ -430,6 +438,7 @@ app.get("/hos/world2015", function (req, res) {
 app.get("/hos/future", function (req, res) {
     Data.find({'game': 'hos'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The chart shows the number of searches of Heroes of the Storm in 2014 and 2015 and makes a prediction in 2016.  As can been seen from the chart, the highest plot is approximately 7000 and the lowest plot is about 5500. The regression line increases gradually from 2014 to 2016 that means the number of search of Heroes of the Storm may continue to increase in 2016.",
             data: result,
             currentGame: "hos",
             gameName: "Heroes of the Storm",
