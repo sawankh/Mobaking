@@ -288,6 +288,8 @@ app.get("/airmech/intro", function (req, res) {
 app.get("/airmech/2014", function (req, res) {
     Data.find({'game': 'airmech', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "The bar chart shows the trend and specific values of searching for Airmech over year 2014. We can see from the graph that the trend commonly stayed at a stable level maintained between 2.8 thousand and 2.6 thousand. In July and August the values reached the peak while it was at the lowest point in the first two months.",
+            bubbleDesc: "This bubble graph displays the number of searches of Airmech every two months over year 2014. At the beginning of 2014, the number of searching for Airmech was the lowest with only about 1300 and the smallest size bubble. After that, it rose to around 2800 in March and April, and then decreased until June. In July and August it peaked at above 2850 which accounted for the largest percentage of the whole year’s number of search. However, it fell again during the rest of year. According to the bubble graph, the whole trend was fluctuated so that it did not clearly ascending trend or descending trend.",            
             data: result,
             currentGame: "airmech",
             gameName: "Airmech",
@@ -298,6 +300,8 @@ app.get("/airmech/2014", function (req, res) {
 app.get("/airmech/2015", function (req, res) {
     Data.find({'game': 'airmech', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "The bar chart shows the trend and specific values of searching for Airmech over year 2015. It can be seen that the trend decreased firstly from 2200 in January to 2000 in April and then increased gradually for the rest year. At last, it peaked around 2300 in the last two months.",
+            bubbleDesc: "This bubble graph illustrates the number of searches of Airmech every two months over year 2015. At the beginning of 2015, the number of searching for Airmech stood at above 2200, but it fell rapidly in the following two months with only about 800 and the smallest size bubble. After that, it began to climb persistently for the rest period. In November and December it peaked at above 2300 which has the biggest bubble in the whole graph.",
             data: result,
             currentGame: "airmech",
             gameName: "Airmech",
@@ -309,6 +313,8 @@ app.get("/airmech/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "airmech"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'airmech', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart reveals the popularity of Airmech based on seven continents. Apparently, this game gained the highest popularity in Europe, which almost consisted half of the whole searching amount. Asia and South America followed Europe, with they having the same percentage approximately 30%. Other continents, North America, Oceania, Africa and Antarctica altogether accounted for about one fifth of the total searching number.",
+                barDesc: "This bar chart shows the top 10 countries for Airmech and specific data of every country. Australia came firstly with around 880 volume of search, and followed by Paraguay, Philippines, and Bolivia with about 760, 550 and 530 respectively. Austria, Vietnam, Ukraine, Chile, United Arab Emirates and Luxembourg, these six countries followed in turn with similar popularity about 450 volume of search.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "airmech",
@@ -322,6 +328,8 @@ app.get("/airmech/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "airmech"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'airmech', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart reveals the popularity of Airmech based indifferent continents. Obviously, this game gained the highest popularity in Europe, which almost consisted 40% of the whole searching amount. Asia and South America followed Europe, with they having the same percentage approximately 35%. However, the rest continents, North America, Oceania, Africa and Antarctica altogether accounted for about one fifth of the total searching number.",
+                barDesc: "This bar chart shows the top 10 countries for Airmech and specific data of every country. Poland came firstly with around 580 volume of search, followed by New Zealand with a volume that just a little less than that of Poland. Vietnam, Israel and Ireland ranked third, fourth and fifth in turn. After that, Denmark, Brasil and Mexico were following them with about 430, 420 and 410 respectively. Finally, Chile and Macedonia ranked at last.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "airmech",
@@ -333,6 +341,7 @@ app.get("/airmech/world2015", function (req, res) {
 app.get("/airmech/future", function (req, res) {
     Data.find({'game': 'airmech'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The scatter plot illustrates the history number of search for Airmech from January 2014 to December 2015, and makes a prediction about the trend for the next year 2016. According to these nodes, although it was fluctuated during the past two years, the whole tendency is descending. So basically the regression line predictes that the game Airmech will be less popular during the period of 2016.",
             data: result,
             currentGame: "airmech",
             gameName: "Airmech",
@@ -565,6 +574,7 @@ app.get("/smite/world2015", function (req, res) {
 app.get("/smite/future", function (req, res) {
     Data.find({'game': 'smite'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The scatter plot illustrates the history number of search for Smite from January 2014 to December 2015, and makes a prediction about the trend for the next year 2016. Although it is not absolute up trend in terms of every node, the whole tendency is to increase. So roughly it is expected that the game Smite will be more popular during the period of 2016.",
             data: result,
             currentGame: "smite",
             gameName: "Smite",
