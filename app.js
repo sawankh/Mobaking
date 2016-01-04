@@ -135,6 +135,8 @@ app.get("/lol/intro", function (req, res) {
 app.get("/lol/2014", function (req, res) {
     Data.find({'game': 'lol', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "This bar chart shows the number of searchs of League of Legends for each two months in 2014. As it can be seen from the bar chart and the distribution line, there is no huge changes in 2014. But the number of searches still fluctuates between 20,000 and 25,000, declining a bit during May-June. That means that League of Legends is very popular in the world.",
+            bubbleDesc: "This bubble plot shows the popularity over the year 2014 for League of Legends. The X axis represent the periods of two months of one year and Y axis represents the number of searches, the size bubble indicates the percentage according the total. As it can been seen from the graph, the huger number of searches is, the bigger the bubble is.  The lowest number of search is between May and June and the biggest bubble is in September and October. In the whole, the number of search is from 22,000 to 24,000 in each 2 months in 2014 expect May and June.",
             data: result,
             currentGame: "lol",
             gameName: "League of Legends",
@@ -145,6 +147,8 @@ app.get("/lol/2014", function (req, res) {
 app.get("/lol/2015", function (req, res) {
     Data.find({'game': 'lol', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "This bar chart shows the number of searchs of League of Legends for each two months in 2015. As it can be seen from the bar chart and the distribution line, there is no huge changes in 2014. But the number of searches still fluctuates between 20,000 and 25,000.",
+            bubbleDesc: "This bubble plot shows the popularity over the year 2014 for League of Legends. The X axis represent the periods of two months of one year and Y axis represents the number of searches, the size bubble indicates the percentage according the total. As it can been seen from the graph, the huger number of searches is, the bigger the bubble is.  The lowest number of search is between May and June and the biggest bubble is in September and October. In the whole, the number of search is from 22,000 to 24,000 in each 2 months in 2014 expect May and June.",
             data: result,
             currentGame: "lol",
             gameName: "League of Legends",
