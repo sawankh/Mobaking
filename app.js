@@ -603,6 +603,8 @@ app.get("/overwatch/intro", function (req, res) {
 app.get("/overwatch/2014", function (req, res) {
     Data.find({'game': 'overwatch', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "The bar chart shows the popularity of Overwatch. The X axis combine two months in one unit. The Y axis shows the value of searching keywords of the game. From the chart we can see that the values of searching is similar in the different months of 2014 except January and February. They are around 290. The months which have maximum value are March and April as well as November and December. However the gap between the maximum and minim values is below 100.",
+            bubbleDesc: "The Bubble Chart focuses on the comparison of different months in the percentage. The percentage decides the size of the bubble. From the chart we can clearly see that March and April as well as November and December have the largest searching amount because the size of the bubble is largest. The smallest bubble is in the July and August.",
             data: result,
             currentGame: "overwatch",
             gameName: "Overwatch",
@@ -613,6 +615,8 @@ app.get("/overwatch/2014", function (req, res) {
 app.get("/overwatch/2015", function (req, res) {
     Data.find({'game': 'overwatch', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "The bar chart shows the popularity of Overwatch in 2015. The X axis combine two months in one unit. The Y axis shows the value of searching keywords of the game. From the chart we can see that the values of searching is similar in the different months of 2015. They are around 2900. The months which have maximum value are September to December. However the gap between the maximum and minim values is below 300.",
+            bubbleDesc: "The Bubble Chart focuses on the comparison of different months in the percentage. The percentage decides the size of the bubble. From the chart we can clearly see that September to December have the largest searching amount because the size of the bubble is largest. The smallest bubble is in the March and April.",
             data: result,
             currentGame: "overwatch",
             gameName: "Overwatch",
@@ -624,6 +628,8 @@ app.get("/overwatch/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "overwatch"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'overwatch', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of different continents. It can be seen that the Europe, Asia and South America are accounted for a large proportion. The game is most popular in the Europe. The popularity in Asia and South America are similar. The Europe nearly accounts for half of the whole chart.",
+                barDesc: "The bar chart is about the top 10 countries which have the largest searching frequency about the game. It is clearly shown that the largest volume is in the United States. And the South Korea follows the US locates at the second place. The other countries have a lower volume but the gap is not large. The last one is Venezuela.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "overwatch",
@@ -637,6 +643,8 @@ app.get("/overwatch/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "overwatch"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'overwatch', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart shows the popularity of different continents. It can be seen that the Europe, Asia and South America are accounted for a large proportion. The game is most popular in the Europe. The popularity in Asia and South America are similar. The Europe nearly accounts for half of the whole chart. ",
+                barDesc: "The bar chart is about the top 10 countries which have the largest searching frequency about the game. It is clearly shown that the largest volume is in the Sweden. And the Peru follows the Sweden locates at the second place. The other countries have a similar volume which is around 500.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "overwatch",
@@ -649,6 +657,7 @@ app.get("/overwatch/world2015", function (req, res) {
 app.get("/overwatch/future", function (req, res) {
     Data.find({'game': 'overwatch'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The chart shows the simple linear regression of the trend of years. The line is calculated by the points of each two months. The line is the most suitably line to describe the trend of the popularity of the game. According to the line on the chart, the trend is rising. It can be predicted that it will increase in the early months of 2016.",
             data: result,
             currentGame: "overwatch",
             gameName: "Overwatch",
@@ -843,6 +852,8 @@ app.get("/mww/intro", function (req, res) {
 app.get("/mww/2014", function (req, res) {
     Data.find({'game': 'mww', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "The bar chart shows the popularity of Magicka Wizard Wars. The X axis combine two months in one unit. The Y axis shows the value of searching keywords of the game. From the chart we can see that the values of searching is similar in the different months of 2014. They are around 2000. The months which have maximum value are July and August. However the gap between the maximum and minim values is below 500.",
+            bubbleDesc: "The Bubble Chart focuses on the comparison of different months in the percentage. The percentage decides the size of the bubble. From the chart we can clearly see that the July and August have the largest searching amount because the size of the bubble is largest. The smallest bubble is in the September and October.",
             data: result,
             currentGame: "mww",
             gameName: "Magicka Wizard Wars",
@@ -853,6 +864,8 @@ app.get("/mww/2014", function (req, res) {
 app.get("/mww/2015", function (req, res) {
     Data.find({'game': 'mww', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "The bar chart shows the popularity of Magicka Wizard Wars in 2015. The X axis combine two months in one unit. The Y axis shows the value of searching keywords of the game. From the chart we can see that the values of searching is similar in the different months of 2015. They are around 1100. The months which have maximum value are May and June and September to December. However the gap between the maximum and minim values is below 100.",
+            bubbleDesc: "The Bubble Chart focuses on the comparison of different months in the percentage. The percentage decides the size of the bubble. From the chart we can clearly see that the May and June have the largest searching amount because the size of the bubble is largest. The smallest bubble is in the September and October.",
             data: result,
             currentGame: "mww",
             gameName: "Magicka Wizard Wars",
@@ -864,6 +877,8 @@ app.get("/mww/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "mww"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'mww', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of different continents. It can be seen that the Europe, Asia and South America are accounted for a large proportion. The game is most popular in the Europe. The popularity in Asia and South America are similar. The Europe nearly accounts for half of the whole chart.",
+                barDesc: "The bar chart is about the top 10 countries which have the largest searching frequency about the game. It is clearly shown that the largest volume is in the United States. And the Australia follows the US locates at the second place. The other countries have a similar volume which is around 380.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "mww",
@@ -877,6 +892,8 @@ app.get("/mww/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "mww"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'mww', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart shows the popularity of different continents. It can be seen that the Europe, Asia and South America are accounted for a large proportion. The game is most popular in the Europe. The popularity in Asia and South America are similar. The Europe nearly accounts for half of the whole chart. ",
+                barDesc: "The bar chart is about the top 10 countries which have the largest searching frequency about the game. It is clearly shown that the largest volume is in the Italy. And the India and Uruguay follow the US locates at the second place. The other countries have a similar volume which is around 180.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "mww",
@@ -889,6 +906,7 @@ app.get("/mww/world2015", function (req, res) {
 app.get("/mww/future", function (req, res) {
     Data.find({'game': 'mww'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The chart shows the simple linear regression of the trend of years. The line is calculated by the points of each two months. The line is the most suitably line to describe the trend of the popularity of the game. According to the line on the chart, the trend is declining. It can be predicted that it will decrease in the early months of 2016.",
             data: result,
             currentGame: "mww",
             gameName: "Magicka Wizard Wars",
