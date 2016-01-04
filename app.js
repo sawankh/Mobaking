@@ -511,6 +511,8 @@ app.get("/smite/intro", function (req, res) {
 app.get("/smite/2014", function (req, res) {
     Data.find({'game': 'smite', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "The bar chart shows the trend and specific values of searching for smite over year 2014. It is clear from the chart the trend did not have fierce fluctuation that the value basically maintained between 10 thousand and 10.5 thousand.",
+            bubbleDesc: "This bubble graph displays the number of searches of Smite every two months over year 2014. At the beginning of 2014, Smite was not so popular with above 10200 number of searches. After that, it peaked at around 10700 at the following two months, which also accounted for the biggest percentage of total search amount during the year according to the size of bubble. Gradually, the popularity slowed down until July and August, and then it increased at 10400 at September and October. However, the popularity declined dramatically at the last two months, with the smallest bubble overall.",
             data: result,
             currentGame: "smite",
             gameName: "Smite",
@@ -521,6 +523,8 @@ app.get("/smite/2014", function (req, res) {
 app.get("/smite/2015", function (req, res) {
     Data.find({'game': 'smite', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "The bar chart shows the trend and specific values of searching for smite over year 2015. It is clear from the chart the trend was stable that the value basically maintained.",
+            bubbleDesc: "This bubble graph displays the number of searches of Smite every two months over year 2015. At the beginning of 2015, the number of searching for Smite stood at approximately 10500. After that, it bottomed at around 10000 at the March and April, which only consisted quietly small part of total search amount during the year. According to the bubble graph, the whole trend was fluctuated, where it reached the peak at around 11125 at September and October.",
             data: result,
             currentGame: "smite",
             gameName: "Smite",
@@ -532,6 +536,8 @@ app.get("/smite/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "smite"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'smite', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart represents the popularity of Smite in different continents. Obviously, it owned the highest popularity in Europe, which almost consisted half of the whole searching amount. Asia and South America followed Europe, and they had the same percentage. Other continents, North America, Oceania, Africa and Antarctica altogether accounted for about one fifth of the total searching number.",
+                barDesc: "This bar chart shows the top 10 countries for Smite and specific figure of every country. Brasil ranked firstly with around 2.8 thousand volume of search, and followed by Argentina and United State with the volume 2.7 thousand and 2.4 respectively. United Arab Emirates, Australia and Philippines these three countries had similar popularity about 2 thousand volume of search. Finally, China, Japan, Finland and Mexico were following in turn.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "smite",
@@ -545,6 +551,8 @@ app.get("/smite/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "smite"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'smite', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart describes the popularity of Smite based on seven continents. Apparently, this game gained the highest popularity in Europe, which almost consisted half of the whole searching amount. Asia and South America followed Europe, and they had the same percentage. Other continents, North America, Oceania, Africa and Antarctica altogether accounted for about one fifth of the total searching number.",
+                barDesc: "This bar chart shows the top 10 countries for Smite and specific figure of every country. New Zealand ranked firstly with around 3.2 thousand volume of search, and followed by Philippines, Japan and Chile which had the same volume about 2.8 thousand. Next, Bolivia, Uruguay, China and Denmark these four countries shared similar popularity even though they ranked at different positon. Finally, USA and France came in at last.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "smite",

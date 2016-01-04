@@ -12,7 +12,7 @@
                         //console.log(world_data[j].period + " --> " + months[i]);
                         var co = new String(world_data[j].country);
                         if (co.toString() !== "undefined") {
-                            datos[months[i]]["areas"][world_data[j].country] = {"value" : world_data[j].value, "tooltip" : {"content" : "<span style=\"font-weight:bold;\">"+world_data[j].countryName+"</span><br />Searches :"+world_data[j].value.toString()}, "value" : world_data[j].value};
+                            datos[months[i]]["areas"][world_data[j].country] = {"value" : world_data[j].value, "tooltip" : {"content" : "<span style=\"font-weight:bold;\">"+world_data[j].countryName+"</span><br />Searches : "+world_data[j].value.toString()}, "value" : world_data[j].value};
                         };
                     };
                 };
