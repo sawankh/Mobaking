@@ -214,6 +214,8 @@ app.get("/dota2/intro", function (req, res) {
 app.get("/dota2/2014", function (req, res) {
     Data.find({'game': 'dota2', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "This chart illustrates the variations of the searches of Doat2 in the year 2014. It was obvious that the searches of Dota2 fluctuated slightly during this year, but the figures of all period were both over 15000. So, it showed that games players around the world maintained a continuous enthusiasm in Dota2.",
+            bubbleDesc: "Normally, bubble charts are a type of chart that displays three dimensions of data. In this chart, the x coordinate and the y coordinate stands for the period of time and the number of searches separately, and the size of bubble stands for the percentage of searches. Obviously, the number of searches experienced a fluctuation in 2014. The number and percentage of searches in March and April were the least in this year. On the contrary, the figures of July and August were both the highest.",
             data: result,
             currentGame: "dota2",
             gameName: "Dota 2",
@@ -224,6 +226,8 @@ app.get("/dota2/2014", function (req, res) {
 app.get("/dota2/2015", function (req, res) {
     Data.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "Compared with the figures in 2014, it is easy to find that the variation of searches in 2015 were similar with that in 2015. Also, the number of searches in 2015 were over 15000. In this way, we can conclude that Dota2 is still a very popular MOBA game in the world.",
+            bubbleDesc: "The bubble chart shows the variations of the number and percentage of searches over the year 2015. The number of searches of Dota2 in 2015 experienced a fluctuation in the number of searches. Meanwhile, the percentage of searches of Dota2 has the same trend in this year.",
             data: result,
             currentGame: "dota2",
             gameName: "Dota 2",
@@ -235,6 +239,8 @@ app.get("/dota2/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "dota2"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'dota2', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of Dota2 in different continents. It was obvious that Dota2 was more popular in Europe, Asia and South America than in other continents. Compared with the chart in 2014, the popularity in each continent almost had no change.",
+                barDesc: "The bar chart illustrates the top 10 countries for Dota2, according to the number of searches. Compared with the chart in 2014, it could be found that the figures of top 10 countries in 2015 decreased slightly and the top 10 countries changed a lot. The top one in 2015 was Greece and games players in Greece searched Dota2 over 4000 in this year.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "dota2",
@@ -248,6 +254,8 @@ app.get("/dota2/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "dota2"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'dota2', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart indicates the popularity of Dota2, according to the number of searches in different continents. It was clear that almost half of searches came from Europe, followed by Asia and South America. By contrary, Players in Africa and Antarctica had the least number of searches.",
+                barDesc: "The bar chart presents the top 10 countries for Dota2, according to the number of searches. New Zealand had the largest number of searches of Dota2, which was followed by Estonia and Canada. Apart from the top 3 countries, the figures of other countries were less then 3000.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "dota2",
@@ -260,6 +268,7 @@ app.get("/dota2/world2015", function (req, res) {
 app.get("/dota2/future", function (req, res) {
     Data.find({'game': 'dota2'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The scatter plot shows the variation of the number of searches of Dota2 and indicates the future trend by giving a regression line. It can be concluded that the number of searches tends to show a downward trend in 2016. In other words, Dota2 will gradually not be so attractive anymore.",
             data: result,
             currentGame: "dota2",
             gameName: "Dota 2",
@@ -444,6 +453,8 @@ app.get("/ic/intro", function (req, res) {
 app.get("/ic/2014", function (req, res) {
     Data.find({'game': 'ic', 'year': '2014'}, function (err, result) {
         res.render("date_14", {
+            barDesc: "The bar chart shows the poplarity for Infinite Crisis, according to the number of searches in different months. Obviously, the number of searches experienced a flucation during this year. And only the number of searches in Mar/Apr and Jul/Aug were more than 12500.",
+            bubbleDesc: "The bubble chart displays the period of time, the number of searches and the percentage of searches. The number of searches increase a lot from January to July, despite a decrease in May/Jun. After August, the number of searches and the percentage of searches experienced a dramatic decrease.",
             data: result,
             currentGame: "ic",
             gameName: "Infinite Crisis",
@@ -454,6 +465,8 @@ app.get("/ic/2014", function (req, res) {
 app.get("/ic/2015", function (req, res) {
     Data.find({'game': 'ic', 'year': '2015'}, function (err, result) {
         res.render("date_15", {
+            barDesc: "The bar chart shows the poplarity for Infinite Crisis over 2015. It is easy to know that Sep and Oct had the least number of searches in this year, which is less than 9000. Compared with the figures in 2014, the number of searches decreased a lot, which can be concluded that games players had less enthusiasm in this game in 2015 than in 2014.",
+            bubbleDesc: "The bubble chart shows the relationships among the number of searches, the percentage of searches and the period of time in 2015. The number of searches of Infinite Crisis in 2015 decreased at the beginning of 2015, then it increased from June before a sudden decrease in September. This trend could also be indicated from the size of bubbles, which stand for the percentage of searches.",
             data: result,
             currentGame: "ic",
             gameName: "Infinite Crisis",
@@ -465,6 +478,8 @@ app.get("/ic/world2014", function (req, res) {
     World.aggregate([{"$match": {year: "2014", game: "ic"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'ic', 'year': '2014'}, function (err, result) {
             res.render("game_world_14", {
+                pieDesc: "The pie chart shows the popularity of Infinite Crisis in different continents. Game players in Europe were more interested in this game than in other continents, which followed by players in Asia and South America. By contrast, the last two continents were Africa and Antarctica.",
+                barDesc: "The bar chart shows the top 10 countries for Infinite Crisis with regard to the number of searches. In this year, Mexico was the top one country, because only the number of searches in Mexico was more than 3000, which was followed by Australia and Colombia.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "ic",
@@ -478,6 +493,8 @@ app.get("/ic/world2015", function (req, res) {
     World.aggregate([{"$match": {year: "2015", game: "ic"}}, { "$group": {"_id": '$countryName', "recommendCount": { "$sum": "$value" }}}, { "$sort": { "recommendCount": -1 } }, { "$limit": 10 }], function (err, top) { 
         World.find({'game': 'ic', 'year': '2015'}, function (err, result) {
             res.render("game_world_15", {
+                pieDesc: "The pie chart shows the popularity of Infinite Crisis in different continents. Tough the total number of searches changed a lot in these two years, around 50% of game players who were interested in Infinite Crisis came from European countries. ",
+                barDesc: "The bar chart shows the top 10 countries for Infinite Crisis with regard to the number of searches. The top one in this year was Bulgaria and games players there searched this game over 2000. The second country is India, where the number of searches was around 1700.",
                 worldTop: top,
                 worldData: result,
                 currentGame: "ic",
@@ -490,6 +507,7 @@ app.get("/ic/world2015", function (req, res) {
 app.get("/ic/future", function (req, res) {
     Data.find({'game': 'ic'}, function (err, result) {
         res.render("future", {
+            scatterDesc: "The scatter plot indicates the future trend of Infinite Crisis by analysing the past data. It can be concluded from the regression line that Infinite Crisis will gradually not be so attractive anymore in regards of the predicted number of searches.",
             data: result,
             currentGame: "ic",
             gameName: "Infinite Crisis",
