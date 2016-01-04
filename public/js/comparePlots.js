@@ -1,8 +1,11 @@
 var jqu=jQuery.noConflict();
 jqu("#compare").click(function () {
 	var selector = jqu("#gameSelect").val();
-	console.log(selector.length);
 	if (selector != null && selector.length == 2) {
+		jqu('#container-area').off();
+		jqu('#container-area').empty();
+		
+
 		var selector = jqu("#gameSelect").val();
 		var games = ["League of Legends", "Dota 2", "Infinite Crisis", "Smite", "Heroes of the Storm", "Heroes of Newreth", "Strife", "Airmech", "Overwatch", "Magicka Wizard Wars"];
 
@@ -216,13 +219,15 @@ jqu("#compare").click(function () {
      	point,
      	i;
 
+     	console.log(point + " out");
      	for (i = 0; i < Highcharts.charts.length; i = i + 1) {
      		chart = Highcharts.charts[i];
             e = chart.pointer.normalize(e); // Find coordinates within the chart
             point = chart.series[0].searchPoint(e, true); // Get the hovered point
 
             if (point) {
-                point.onMouseOver(); // Show the hover marker
+            	console.log(point);
+            	point.onMouseOver(); // Show the hover marker
                 chart.tooltip.refresh(point); // Show the tooltip
                 chart.xAxis[0].drawCrosshair(e, point); // Show the crosshair
             }
