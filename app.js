@@ -12,7 +12,14 @@ var app = express();
 /*
 Database and Models
 */
-mongoose.connect("mongodb://localhost/mobaking");
+var url = '127.0.0.1:27017/' + process.env.OPENSHIFT_APP_NAME;
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
+if (process.env.OPENSHIFT_MONGODB_DB_URL) {
+    url = process.env.OPENSHIFT_MONGODB_DB_URL +
+    process.env.OPENSHIFT_APP_NAME;
+}
 
 var gameSchema = new mongoose.Schema({
     name: String,
@@ -947,4 +954,4 @@ app.get("/mww/future", function (req, res) {
 });
 
 
-http.createServer(app).listen(3000);
+http.createServer(app).listen(server_port, server_ip_address);
