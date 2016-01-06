@@ -1,16 +1,34 @@
-Mobaking
+![Mobaking](/images/mobaking_logo.png)
 ========
 Web app designed using [MEAN](http://mean.io/).
 * version: 1.0
 * Group project of the module "COMP6235 Foundations of Data Science", MSc in Computer Science, University of Southampton.
 
 ## [Colaborators](https://github.com/alu0100694765/Mobaking/graphs/contributors)
-Sawan Jagdish Kapai Harpalani. Contact: <sawankapai@gmail.com>
+* Sawan Jagdish Kapai Harpalani. Contact: <sawankapai@gmail.com>
+* Xu Han. Contact: <xh1g15@soton.ac.co.uk>
+* Yingdan Xu. Contact: <yx2g15@soton.ac.co.uk>
+* Peng Gou. Contact: <pg1a14@soton.ac.co.uk>
+* Shanchuan Wu. Contact: <xz9a14@soton.ac.co.uk>
+* Xu Zhang. Contact: <xz9a14@soton.ac.uk>
 
 ## [License](http://www.gnu.org/licenses/gpl-3.0.html) ![LICENSE](http://www.gnu.org/graphics/gplv3-88x31.png)
 This project is under GNU license.
 
-## Project Description.
+## Branches
+*	[Front-End](https://github.com/alu0100694765/Mobaking/tree/web-views): Design the front end.
+*	[Back-End](https://github.com/alu0100694765/Mobaking/tree/web-deb): Design back end.
+
+## Plotting
+*	barWorld.js
+*	comparePlots.js
+*	historicalBarLine.js
+*	historicalBubble.js
+*	pieChart.js
+*	scatterPlot.js
+*	spiderWeb.js
+*	worlMap.js
+*	worldStats.js
 
 ## M.E.A.N Stack [![MEAN Logo](http://mean.io/system/assets/img/logos/meanlogo.png)](http://mean.io/) 
 
