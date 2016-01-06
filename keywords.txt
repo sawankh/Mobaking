@@ -1,3 +1,0 @@
-smite: popularity  rank  heat  region  team  wiki  arena  god  panthon  scene  conquest  assault
-
-airmech: popularity  rank  heat  region  team  wiki  arena  robot fortress  mode  units

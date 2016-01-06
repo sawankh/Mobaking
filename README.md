@@ -1,4 +1,4 @@
-![Mobaking](/images/mobaking_logo.png)
+![Mobaking](public/images/mobaking_logo.png)
 ========
 Web app designed using [MEAN](http://mean.io/).
 * version: 1.0
