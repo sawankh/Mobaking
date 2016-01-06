@@ -1,5 +1,11 @@
 ![Mobaking](public/images/mobaking_logo.png)
 ========
+
+## Mobaking Online
+Mobaking has been deployed to a open server provided by Open Shit by Redhat. If you experience lag just refresh as the server is located in USA.
+
+[Mobaking](http://mobaking-sawankapai.rhcloud.com/)
+
 Web app designed using [MEAN](http://mean.io/).
 * version: 1.0
 * Group project of the module "COMP6235 Foundations of Data Science", MSc in Computer Science, University of Southampton.
